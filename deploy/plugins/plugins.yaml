@@ -1,0 +1,130 @@
+plugins:
+  - name: "communication-explorer"
+    displayName: "Communication Explorer"
+    type: "editor"
+    requiredDoc: true
+    version: "0.0.31"
+    sha256: "5e0c88e3b294dbdfe9c256b4186c993b08e05f90d475040d5b7cfe043101caff"
+    url: "https://raw.githubusercontent.com/sprinteins/oscd-plugins/refs/heads/gh-pages/communication-explorer/0.0.31/index.js"
+
+  - name: "network-explorer"
+    displayName: "Network Explorer"
+    type: "editor"
+    requiredDoc: true
+    version: "0.0.12"
+    sha256: "65f667246817b6f24562e9237c0c5bf36f4531e301ad1cad4a3f0ea3f60fee7b"
+    url: "https://raw.githubusercontent.com/sprinteins/oscd-plugins/refs/heads/gh-pages/network-explorer/0.0.12/index.js"
+
+  - name: "documentation"
+    displayName: "Documentation"
+    type: "editor"
+    requiredDoc: true
+    version: "1.0.5"
+    sha256: "e32faafba2bef47c684e15044a11fb49e29044495833bf0b7fc7a52307401b8f"
+    url: "https://raw.githubusercontent.com/sprinteins/oscd-plugins/refs/heads/gh-pages/documentation/1.0.5/index.js"
+
+  - name: "oscd-template-generator"
+    displayName: "OSCD Template Generator"
+    type: "editor"
+    requiredDoc: true
+    version: "x.x.x"
+    sha256: "826a14c6dd5ec4bf72a5429cf1538381f9cfe727ba7e26d083d390f2a4d5f20d"
+    url: "https://ca-d.github.io/oscd-template-generator/oscd-template-generator.js"
+
+  - name: "oscd-supervision"
+    displayName: "OSCD Supervision"
+    type: "editor"
+    requiredDoc: true
+    version: "x.x.x"
+    sha256: "de4c935b47569fb63362d283b28ce4591aecd8135ac5961cd890db8f5ff4889f"
+    url: "https://danyill.github.io/oscd-supervision/oscd-supervision.js"
+
+  - name: "archive-explorer"
+    displayName: 'Archive Explorer'
+    type: 'editor'
+    version: "x.x.x"
+    url: "https://ase-compas.github.io/compas-transnetbw-plugins/bearingpoint/compas/plugins/archive-explorer/index.js"
+    additionalResources:
+      - "https://ase-compas.github.io/compas-transnetbw-plugins/bearingpoint/compas/plugins/archive-explorer/style.css"
+      - "https://ase-compas.github.io/compas-transnetbw-plugins/bearingpoint/compas/plugins/archive-explorer/global.css"
+
+  - name: "history-viewer"
+    displayName: 'History Viewer'
+    type: 'editor'
+    version: "x.x.x"
+    url: "https://ase-compas.github.io/compas-transnetbw-plugins/bearingpoint/compas/plugins/history-viewer/index.js"
+    additionalResources:
+      - "https://ase-compas.github.io/compas-transnetbw-plugins/bearingpoint/compas/plugins/history-viewer/style.css"
+      - "https://ase-compas.github.io/compas-transnetbw-plugins/bearingpoint/compas/plugins/history-viewer/global.css"
+
+  - name: "location-manager"
+    displayName: 'Location Manager'
+    type: 'editor'
+    version: "x.x.x"
+    url: "https://ase-compas.github.io/compas-transnetbw-plugins/bearingpoint/compas/plugins/location-manager/index.js"
+    additionalResources:
+      - "https://ase-compas.github.io/compas-transnetbw-plugins/bearingpoint/compas/plugins/location-manager/style.css"
+      - "https://ase-compas.github.io/compas-transnetbw-plugins/bearingpoint/compas/plugins/location-manager/global.css"
+
+  - name: "location-viewer"
+    displayName: 'Location Viewer'
+    type: 'editor'
+    version: "x.x.x"
+    url: "https://ase-compas.github.io/compas-transnetbw-plugins/bearingpoint/compas/plugins/location-viewer/index.js"
+    additionalResources:
+      - "https://ase-compas.github.io/compas-transnetbw-plugins/bearingpoint/compas/plugins/location-viewer/style.css"
+      - "https://ase-compas.github.io/compas-transnetbw-plugins/bearingpoint/compas/plugins/location-viewer/global.css"
+
+  - name: "tsld"
+    displayName: "TSLD Editor"
+    type: "editor"
+    version: "x.x.x"
+    url: "https://ase-compas.github.io/compas-transnetbw-plugins/bearingpoint/compas/plugins/tsld/index.js"
+
+  - name: "type-designer"
+    displayName: "Type Designer"
+    type: 'editor'
+    version: "x.x.x"
+    url: "https://sprinteins.github.io/oscd-plugins/type-designer/index.js"
+
+  - name: "auto-doc"
+    displayName: "Auto Doc"
+    type: 'editor'
+    version: "x.x.x"
+    url: "https://sprinteins.github.io/oscd-plugins/auto-doc/index.js"
+
+  - name: "io-center"
+    displayName: "IO Center"
+    type: 'editor'
+    version: "x.x.x"
+    url: "https://sprinteins.github.io/oscd-plugins/io-center/index.js"
+
+  - name: "type-switcher"
+    displayName: "Type Switcher"
+    type: 'editor'
+    version: "x.x.x"
+    url: "https://sprinteins.github.io/oscd-plugins/type-switcher/index.js"
+
+  - name: "launcher"
+    displayName: "OSCD Launcher"
+    type: 'editor'
+    version: "x.x.x"
+    url: "https://sprinteins.github.io/oscd-launcher/index.js"
+
+  - name: "ied"
+    displayName: "IED"
+    type: 'editor'
+    version: "x.x.x"
+    url: "https://philippilievskibearingpointcom.github.io/oscd-official-plugins/plugins/editors/ied.js"
+
+  - name: "Substation"
+    displayName: "Substation"
+    type: 'editor'
+    version: "x.x.x"
+    url: "https://philippilievskibearingpointcom.github.io/oscd-official-plugins/plugins/editors/substation.js"
+
+  - name: "Substation"
+    displayName: "Substation"
+    type: 'editor'
+    version: "x.x.x"
+    url: "https://philippilievskibearingpointcom.github.io/oscd-official-plugins/plugins/editors/substation.js"
