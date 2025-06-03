@@ -1,47 +1,506 @@
 plugins:
-  - name: "communication-explorer"
-    displayName: "Communication Explorer"
-    type: "editor"
-    requiredDoc: true
-    version: "0.0.31"
-    sha256: "5e0c88e3b294dbdfe9c256b4186c993b08e05f90d475040d5b7cfe043101caff"
-    url: "https://raw.githubusercontent.com/sprinteins/oscd-plugins/refs/heads/gh-pages/communication-explorer/0.0.31/index.js"
+#
+#  # ----- OSCD-Official-Plugins -----
+#
+#  - name: "104"
+#    displayName: "104"
+#    url: "https://philippilievskibearingpointcom.github.io/oscd-official-plugins/plugins/editors/protocol104.js"
+#    icon: "settings_ethernet"
+#    version: "x.x.x"
+#    activeByDefault: false
+#    kind: "editor"
+#    requireDoc: true
+#
+#  - name: "cleanup"
+#    displayName: "Cleanup"
+#    url: "https://philippilievskibearingpointcom.github.io/oscd-official-plugins/plugins/editors/cleanup.js"
+#    version: "x.x.x"
+#    icon: "cleaning_services"
+#    activeByDefault: false
+#    kind: "editor"
+#    requireDoc: true
+#
+#  - name: "communication"
+#    displayName: "Communication"
+#    url: "https://philippilievskibearingpointcom.github.io/oscd-official-plugins/plugins/editors/communication.js"
+#    version: "x.x.x"
+#    icon: "settings_ethernet"
+#    activeByDefault: true
+#    kind: "editor"
+#    requireDoc: true
+#
+#  # This OSCD-Official-Plugin is overwritten by Sprint-Eins-Plugins
+#  #- name: "communication-explorer"
+#  #  displayName: "Communication Explorer"
+#  #  url: "https://philippilievskibearingpointcom.github.io/oscd-official-plugins/plugins/editors/communication-explorer.js"
+#  #  version: "x.x.x"
+#  #  icon: "lan"
+#  #  activeByDefault: true
+#  #  kind: "editor"
+#  #  requireDoc: true
+#
+#  # This OSCD-Official-Plugin is overwritten by CoMPAS-Plugins
+#  #- name: "compare-ied"
+#  #  displayName: "Compare IED"
+#  #  url: "https://philippilievskibearingpointcom.github.io/oscd-official-plugins/plugins/menu/compareied.js"
+#  #  version: "x.x.x"
+#  #  icon: "compare_arrows"
+#  #  activeByDefault: true
+#  #  kind: "menu"
+#  #  requireDoc: true
+#  #  position: "middle"
+#
+#  - name: "create-virtual-ied"
+#    displayName: "Create Virtual IED"
+#    url: "https://philippilievskibearingpointcom.github.io/oscd-official-plugins/plugins/menu/virtualtemplateied.js"
+#    version: "x.x.x"
+#    icon: "developer_board"
+#    activeByDefault: false
+#    kind: "menu"
+#    requireDoc: true
+#    position: "middle"
+#
+#  - name: "export-communication-section"
+#    displayName: "Export Communication Section"
+#    url: "https://philippilievskibearingpointcom.github.io/oscd-official-plugins/plugins/menu/exportcommunication.js"
+#    version: "x.x.x"
+#    icon: "sim_card_download"
+#    activeByDefault: false
+#    kind: "menu"
+#    requireDoc: true
+#    position: "middle"
+#
+#  - name: "help"
+#    displayName: "Help"
+#    url: "https://philippilievskibearingpointcom.github.io/oscd-official-plugins/plugins/menu/help.js"
+#    version: "x.x.x"
+#    icon: "help"
+#    activeByDefault: true
+#    kind: "menu"
+#    requireDoc: false
+#    position: "bottom"
+#
+#  - name: "ied"
+#    displayName: "IED"
+#    kind: "editor"
+#    version: "x.x.x"
+#    icon: "developer_board"
+#    requireDoc: true
+#    activeByDefault: true
+#    url: "https://philippilievskibearingpointcom.github.io/oscd-official-plugins/plugins/editors/ied.js"
+#
+#  # This OSCD_Official-Plugin is overwritten by CoMPAS-Plugins
+#  #- name: "import-ieds"
+#  #  displayName: "Import IEDs"
+#  #  url: "https://philippilievskibearingpointcom.github.io/oscd-official-plugins/plugins/menu/importieds.js"
+#  #  version: "x.x.x"
+#  #  icon: "snippet_folder"
+#  #  activeByDefault: true
+#  #  kind: "menu"
+#  #  requireDoc: true
+#  #  position: "middle"
+#
+#  # This OSCD_Official-Plugin is overwritten by CoMPAS-Plugins
+#  #- name: "merge-project"
+#  #  displayName: "Merge Project"
+#  #  url: "https://philippilievskibearingpointcom.github.io/oscd-official-plugins/plugins/menu/merge.js"
+#  #  version: "x.x.x"
+#  #  icon: "merge_type"
+#  #  activeByDefault: true
+#  #  kind: "menu"
+#  #  requireDoc: true
+#  #  position: "middle"
+#
+#  - name: "new-project"
+#    displayName: "New project"
+#    url: "https://philippilievskibearingpointcom.github.io/oscd-official-plugins/plugins/menu/newproject.js"
+#    version: "x.x.x"
+#    icon: "create_new_folder"
+#    activeByDefault: true
+#    kind: "menu"
+#    requireDoc: false
+#    position: "top"
+#
+#  # This OSCD_Official-Plugin is overwritten by CoMPAS-Plugins
+#  #- name: "open-project"
+#  #  displayName: "Open project"
+#  #  url: "https://philippilievskibearingpointcom.github.io/oscd-official-plugins/plugins/menu/openproject.js"
+#  #  version: "x.x.x"
+#  #  icon: "folder_open"
+#  #  activeByDefault: true
+#  #  kind: "menu"
+#  #  requireDoc: false
+#  #  position: "top"
+#
+#  # TODO
+#  - name: "plugin-store-beta"
+#    displayName: "Plugin Store (Beta)"
+#    url: "https://sprinteins.github.io/oscd-plugin-store/index.js"
+#    version: "x.x.x"
+#    icon: "shopping_bag"
+#    activeByDefault: false
+#    kind: "menu"
+#    requireDoc: false
+#    position: "bottom"
+#
+#  # TODO verify source
+#  - name: "publisher"
+#    displayName: "Publisher"
+#    url: "https://philippilievskibearingpointcom.github.io/oscd-official-plugins/plugins/editors/oscd-publisher.js"
+#    #url: ""/external-plugins/oscd-publisher/oscd-publisher.js""
+#    version: "x.x.x"
+#    icon: "publish"
+#    activeByDefault: true
+#    kind: "editor"
+#    requireDoc: true
+#
+#  # This OSCD_Official-Plugin is overwritten by CoMPAS-Plugins
+#  #- name: "save-project"
+#  #  displayName: "Save project"
+#  #  url: "https://philippilievskibearingpointcom.github.io/oscd-official-plugins/plugins/menu/saveproject.js"
+#  #  version: "x.x.x"
+#  #  icon: "save"
+#  #  activeByDefault: true
+#  #  kind: "menu"
+#  #  requireDoc: true
+#  #  position: "top"
+#
+#  - name: "show-scl-history"
+#    displayName: "Show SCL History"
+#    url: "ttps://philippilievskibearingpointcom.github.io/oscd-official-plugins/plugins/menu/sclhistory.js"
+#    version: "x.x.x"
+#    icon: "history_toggle_off"
+#    activeByDefault: true
+#    kind: "menu"
+#    requireDoc: true
+#    position: "bottom"
+#
+#  - name: "single-line-diagram"
+#    displayName: "Single Line Diagram"
+#    url: "https://philippilievskibearingpointcom.github.io/oscd-official-plugins/plugins/editors/singlelinediagram.js"
+#    version: "x.x.x"
+#    icon: "edit"
+#    activeByDefault: false
+#    kind: "editor"
+#    requireDoc: true
+#
+#  - name: "subscriber-data-binding-goose"
+#    displayName: "Subscriber Data Binding (GOOSE)"
+#    url: "https://philippilievskibearingpointcom.github.io/oscd-official-plugins/plugins/editors/goosesubscriberdatabinding.js"
+#    version: "x.x.x"
+#    icon: "link"
+#    activeByDefault: false
+#    kind: "editor"
+#    requireDoc: true
+#
+#  - name: "subscriber-data-binding-smv"
+#    displayName: "Subscriber Data Binding (SMV)"
+#    url: "https://philippilievskibearingpointcom.github.io/oscd-official-plugins/plugins/editors/smvsubscriberdatabinding.js"
+#    version: "x.x.x"
+#    icon: "link"
+#    activeByDefault: false
+#    kind: "editor"
+#    requireDoc: true
+#
+#  - name: "subscriber-later-binding-goose"
+#    displayName: "Subscriber Later Binding (GOOSE)"
+#    url: "https://philippilievskibearingpointcom.github.io/oscd-official-plugins/plugins/editors/goosesubscriberlaterbinding.js"
+#    version: "x.x.x"
+#    icon: "link"
+#    activeByDefault: true
+#    kind: "editor"
+#    requireDoc: true
+#
+#  - name: "subscriber-later-binding-smv"
+#    displayName: "Subscriber Later Binding (SMV)"
+#    url: "https://philippilievskibearingpointcom.github.io/oscd-official-plugins/plugins/editors/smvsubscriberlaterbinding.js"
+#    version: "x.x.x"
+#    icon: "link"
+#    activeByDefault: true
+#    kind: "editor"
+#    requireDoc: true
+#
+#  - name: "subscriber-message-binding-goose"
+#    displayName: "Subscriber Message Binding (GOOSE)"
+#    url: "https://philippilievskibearingpointcom.github.io/oscd-official-plugins/plugins/editors/goosesubscribermessagebinding.js"
+#    version: "x.x.x"
+#    icon: "link"
+#    activeByDefault: false
+#    kind: "editor"
+#    requireDoc: true
+#
+#  - name: "subscriber-message-binding-smv"
+#    displayName: "Subscriber Message Binding (SMV)"
+#    url: "https://philippilievskibearingpointcom.github.io/oscd-official-plugins/plugins/editors/smvsubscribermessagebinding.js"
+#    version: "x.x.x"
+#    icon: "link"
+#    activeByDefault: false
+#    kind: "editor"
+#    requireDoc: true
+#
+#  - name: "subscriber-update"
+#    displayName: "Subscriber Update"
+#    url: "https://philippilievskibearingpointcom.github.io/oscd-official-plugins/plugins/menu/subscriberinfo.js"
+#    version: "x.x.x"
+#    activeByDefault: true
+#    kind: "menu"
+#    requireDoc: true
+#    position: "middle"
+#
 
-  - name: "network-explorer"
-    displayName: "Network Explorer"
-    type: "editor"
-    requiredDoc: true
-    version: "0.0.12"
-    sha256: "65f667246817b6f24562e9237c0c5bf36f4531e301ad1cad4a3f0ea3f60fee7b"
-    url: "https://raw.githubusercontent.com/sprinteins/oscd-plugins/refs/heads/gh-pages/network-explorer/0.0.12/index.js"
-
-  - name: "documentation"
-    displayName: "Documentation"
-    type: "editor"
-    requiredDoc: true
-    version: "1.0.5"
-    sha256: "e32faafba2bef47c684e15044a11fb49e29044495833bf0b7fc7a52307401b8f"
-    url: "https://raw.githubusercontent.com/sprinteins/oscd-plugins/refs/heads/gh-pages/documentation/1.0.5/index.js"
-
-  - name: "oscd-template-generator"
-    displayName: "OSCD Template Generator"
-    type: "editor"
-    requiredDoc: true
+  - name: "subbbstation"
+    displayName: "Supistation"
+    kind: "editor"
     version: "x.x.x"
-    sha256: "826a14c6dd5ec4bf72a5429cf1538381f9cfe727ba7e26d083d390f2a4d5f20d"
-    url: "https://ca-d.github.io/oscd-template-generator/oscd-template-generator.js"
+    url: "https://philippilievskibearingpointcom.github.io/oscd-official-plugins/plugins/editors/substation.js"
 
-  - name: "oscd-supervision"
-    displayName: "OSCD Supervision"
-    type: "editor"
-    requiredDoc: true
-    version: "x.x.x"
-    sha256: "de4c935b47569fb63362d283b28ce4591aecd8135ac5961cd890db8f5ff4889f"
-    url: "https://danyill.github.io/oscd-supervision/oscd-supervision.js"
+#  - name: "templates"
+#    displayName: "Templates"
+#    url: "https://philippilievskibearingpointcom.github.io/oscd-official-plugins/plugins/editors/templates.js"
+#    version: "x.x.x"
+#    icon: "copy_all"
+#    activeByDefault: true
+#    kind: "editor"
+#    requireDoc: true
+#
+#  - name: "update-desc-abb"
+#    displayName: "Update desc (ABB)"
+#    url: "https://philippilievskibearingpointcom.github.io/oscd-official-plugins/plugins/menu/updatedescriptionabb.js"
+#    version: "x.x.x"
+#    activeByDefault: false
+#    kind: "menu"
+#    requireDoc: true
+#    position: "middle"
+#
+#  - name: "update-desc-sel"
+#    displayName: "Update desc (SEL)"
+#    url: "https://philippilievskibearingpointcom.github.io/oscd-official-plugins/plugins/menu/updatedescriptionsel.js"
+#    version: "x.x.x"
+#    activeByDefault: false
+#    kind: "menu"
+#    requireDoc: true
+#    position: "middle"
+#
+#  # This OSCD_Official-Plugin is overwritten by CoMPAS-Plugins
+#  #- name: "update-substation"
+#  #  displayName: "Update Substation"
+#  #  url: "https://philippilievskibearingpointcom.github.io/oscd-official-plugins/plugins/menu/updatesubstation.js"
+#  #  version: "x.x.x"
+#  #  icon: "merge_type"
+#  #  activeByDefault: true
+#  #  kind: "menu"
+#  #  requireDoc: true
+#  #  position: "middle"
+#
+#  - name: "validate-schema"
+#    displayName: "Validate Schema"
+#    url: "https://philippilievskibearingpointcom.github.io/oscd-official-plugins/plugins/validators/validateschema.js"
+#    version: "x.x.x"
+#    icon: "rule_folder"
+#    activeByDefault: true
+#    kind: "validator"
+#
+#  - name: "validate-templates"
+#    displayName: "Validate Templates"
+#    url: "https://philippilievskibearingpointcom.github.io/oscd-official-plugins/plugins/validators/validatetemplates.js"
+#    version: "x.x.x"
+#    icon: "rule_folder"
+#    activeByDefault: true
+#    kind: "validator"
+#
+#  # ----- CoMPAS-Plugins -----
+#
+#  - name: "auto-align-sld"
+#    displayName: "Auto Align SLD"
+#    url: "https://ase-compas.github.io/compas-open-scd-plugins/plugins/menu/compasautoalignment.js"
+#    version: "x.x.x"
+#    icon: "dashboard"
+#    activeByDefault: true
+#    kind: "menu"
+#    requireDoc: true
+#    position: "middle"
+#
+#  - name: "autogen-substation"
+#    displayName: "Autogen Substation"
+#    url: "https://ase-compas.github.io/compas-open-scd-plugins/plugins/editors/autogen-substation.js"
+#    version: "x.x.x"
+#    icon: "playlist_add_circle"
+#    activeByDefault: true
+#    kind: "menu"
+#    requireDoc: true
+#    position: "middle"
+#
+#  - name: "compare-ied"
+#    displayName: "Compare IED"
+#    url: "https://ase-compas.github.io/compas-open-scd-plugins/plugins/menu/compascompareied.js"
+#    version: "x.x.x"
+#    icon: "compare_arrows"
+#    activeByDefault: true
+#    kind: "menu"
+#    requireDoc: true
+#    position: "middle"
+#
+#  - name: "compas-settings"
+#    displayName: "CoMPAS Settings"
+#    url: "https://ase-compas.github.io/compas-open-scd-plugins/plugins/menu/compassettings.js"
+#    version: "x.x.x"
+#    icon: "settings"
+#    activeByDefault: true
+#    kind: "menu"
+#    requireDoc: false
+#    position: "bottom"
+#
+#  - name: "compas-versions"
+#    displayName: "CoMPAS Versions"
+#    url: "https://ase-compas.github.io/compas-open-scd-plugins/plugins/editors/compasversions.js"
+#    version: "x.x.x"
+#    icon: "copy_all"
+#    activeByDefault: true
+#    kind: "editor"
+#    requireDoc: true
+#
+#  - name: "export-iec-104-csv"
+#    displayName: "Export IEC 104 CSV"
+#    url: "https://ase-compas.github.io/compas-open-scd-plugins/plugins/menu/export104.js"
+#    version: "x.x.x"
+#    icon: "sim_card_download"
+#    activeByDefault: false
+#    kind: "menu"
+#    requireDoc: true
+#    position: "middle"
+#
+#  - name: "export-ied-params"
+#    displayName: "Export IED Params"
+#    url: "https://ase-compas.github.io/compas-open-scd-plugins/plugins/menu/exportiedparams.js"
+#    version: "x.x.x"
+#    icon: "download"
+#    activeByDefault: false
+#    kind: "menu"
+#    requireDoc: true
+#    position: "middle"
+#
+#  - name: "import-from-api"
+#    displayName: "Import from API"
+#    url: "https://ase-compas.github.io/compas-open-scd-plugins/plugins/menu/compasimportfromapi.js"
+#    version: "x.x.x"
+#    icon: "cloud_download"
+#    activeByDefault: false
+#    kind: "menu"
+#    requireDoc: false
+#    position: "top"
+#
+#  - name: "import-ieds"
+#    displayName: "Import IEDs"
+#    url: "https://ase-compas.github.io/compas-open-scd-plugins/plugins/menu/compasimportieds.js"
+#    version: "x.x.x"
+#    icon: "snippet_folder"
+#    activeByDefault: true
+#    kind: "menu"
+#    requireDoc: true
+#    position: "middle"
+#
+#  - name: "locamation-vmu"
+#    displayName: "Locamation VMU"
+#    url: "https://ase-compas.github.io/compas-open-scd-plugins/plugins/menu/locamationvmu.js"
+#    version: "x.x.x"
+#    icon: "edit_note"
+#    activeByDefault: false
+#    kind: "menu"
+#    requireDoc: true
+#    position: "middle"
+#
+#  - name: "merge-project"
+#    displayName: "Merge Project"
+#    url: "https://ase-compas.github.io/compas-open-scd-plugins/plugins/menu/compasmerge.js"
+#    version: "x.x.x"
+#    icon: "merge_type"
+#    activeByDefault: true
+#    kind: "menu"
+#    requireDoc: true
+#    position: "middle"
+#
+#  - name: "open-project"
+#    displayName: "Open Project"
+#    url: "https://ase-compas.github.io/compas-open-scd-plugins/plugins/menu/compasopen.js"
+#    version: "x.x.x"
+#    icon: "folder_open"
+#    activeByDefault: true
+#    kind: "menu"
+#    requireDoc: false
+#    position: "top"
+#
+#  - name: "project-from-cim"
+#    displayName: "Project from CIM"
+#    url: "https://ase-compas.github.io/compas-open-scd-plugins/plugins/menu/compascimmapping.js"
+#    version: "x.x.x"
+#    icon: "input"
+#    activeByDefault: true
+#    kind: "menu"
+#    requireDoc: false
+#    position: "top"
+#
+#  - name: "save-as-version"
+#    displayName: "Save as Version"
+#    url: "https://ase-compas.github.io/compas-open-scd-plugins/plugins/menu/compassaveasversion.js"
+#    version: "x.x.x"
+#    icon: "save"
+#    activeByDefault: true
+#    kind: "menu"
+#    requireDoc: true
+#    position: "top"
+#
+#  - name: "save-project"
+#    displayName: "Save Project"
+#    url: "https://ase-compas.github.io/compas-open-scd-plugins/plugins/menu/compassave.js"
+#    version: "x.x.x"
+#    icon: "save"
+#    activeByDefault: true
+#    kind: "menu"
+#    requireDoc: true
+#    position: "top"
+#
+#  - name: "save-project-as"
+#    displayName: "Save Project as"
+#    url: "https://ase-compas.github.io/compas-open-scd-plugins/plugins/menu/compassaveas.js"
+#    version: "x.x.x"
+#    icon: "save"
+#    activeByDefault: true
+#    kind: "menu"
+#    requireDoc: true
+#    position: "top"
+#
+#  - name: "sitipe"
+#    displayName: "Sitipe"
+#    url: "https://ase-compas.github.io/compas-open-scd-plugins/plugins/editors/sitipe.js"
+#    version: "x.x.x"
+#    icon: "precision_manufacturing"
+#    activeByDefault: true
+#    kind: "editor"
+#    requireDoc: true
+#
+#  - name: "update-substation"
+#    displayName: "Update Substation"
+#    url: "https://ase-compas.github.io/compas-open-scd-plugins/plugins/menu/compasupdatesubstation.js"
+#    version: "x.x.x"
+#    icon: "merge_type"
+#    activeByDefault: true
+#    kind: "menu"
+#    requireDoc: true
+#    position: "middle"
+#
+#  - name: "validate-using-ocl"
+#    displayName: "[WIP] Validate using OCL"
+#    url: "https://ase-compas.github.io/compas-open-scd-plugins/plugins/validators/compasvalidateschema.js"
+#    version: "x.x.x"
+#    icon: "rule_folder"
+#    activeByDefault: false
+#    kind: "validator"
+
+  # ----- TransnetBW-Plugins -----
 
   - name: "archive-explorer"
-    displayName: 'Archive Explorer'
-    type: 'editor'
+    displayName: "Archive Explorer"
+    kind: "editor"
     version: "x.x.x"
     url: "https://ase-compas.github.io/compas-transnetbw-plugins/bearingpoint/compas/plugins/archive-explorer/index.js"
     additionalResources:
@@ -49,8 +508,8 @@ plugins:
       - "https://ase-compas.github.io/compas-transnetbw-plugins/bearingpoint/compas/plugins/archive-explorer/global.css"
 
   - name: "history-viewer"
-    displayName: 'History Viewer'
-    type: 'editor'
+    displayName: "History Viewer"
+    kind: "editor"
     version: "x.x.x"
     url: "https://ase-compas.github.io/compas-transnetbw-plugins/bearingpoint/compas/plugins/history-viewer/index.js"
     additionalResources:
@@ -58,8 +517,8 @@ plugins:
       - "https://ase-compas.github.io/compas-transnetbw-plugins/bearingpoint/compas/plugins/history-viewer/global.css"
 
   - name: "location-manager"
-    displayName: 'Location Manager'
-    type: 'editor'
+    displayName: "Location Manager"
+    kind: "editor"
     version: "x.x.x"
     url: "https://ase-compas.github.io/compas-transnetbw-plugins/bearingpoint/compas/plugins/location-manager/index.js"
     additionalResources:
@@ -67,8 +526,8 @@ plugins:
       - "https://ase-compas.github.io/compas-transnetbw-plugins/bearingpoint/compas/plugins/location-manager/global.css"
 
   - name: "location-viewer"
-    displayName: 'Location Viewer'
-    type: 'editor'
+    displayName: "Location Viewer"
+    kind: "editor"
     version: "x.x.x"
     url: "https://ase-compas.github.io/compas-transnetbw-plugins/bearingpoint/compas/plugins/location-viewer/index.js"
     additionalResources:
@@ -77,54 +536,92 @@ plugins:
 
   - name: "tsld"
     displayName: "TSLD Editor"
-    type: "editor"
+    kind: "editor"
     version: "x.x.x"
     url: "https://ase-compas.github.io/compas-transnetbw-plugins/bearingpoint/compas/plugins/tsld/index.js"
 
-  - name: "type-designer"
-    displayName: "Type Designer"
-    type: 'editor'
-    version: "x.x.x"
-    url: "https://sprinteins.github.io/oscd-plugins/type-designer/index.js"
+  # ---- Sprint-Eins-Plugins -----
 
-  - name: "auto-doc"
-    displayName: "Auto Doc"
-    type: 'editor'
-    version: "x.x.x"
-    url: "https://sprinteins.github.io/oscd-plugins/auto-doc/index.js"
+  - name: "communication-explorer"
+    displayName: "Communication Explorer"
+    kind: "editor"
+    requiredDoc: true
+    version: "0.0.31"
+    url: "https://raw.githubusercontent.com/sprinteins/oscd-plugins/refs/heads/gh-pages/communication-explorer/0.0.31/index.js"
+    sha256: "5e0c88e3b294dbdfe9c256b4186c993b08e05f90d475040d5b7cfe043101caff"
 
-  - name: "io-center"
-    displayName: "IO Center"
-    type: 'editor'
-    version: "x.x.x"
-    url: "https://sprinteins.github.io/oscd-plugins/io-center/index.js"
+  # TODO verify this plugin as its not in the CoMPAS main version
+  #- name: "network-explorer"
+  #  displayName: "Network Explorer"
+  #  kind: "editor"
+  #  requiredDoc: true
+  #  version: "0.0.12"
+  #  sha256: "65f667246817b6f24562e9237c0c5bf36f4531e301ad1cad4a3f0ea3f60fee7b"
+  #  url: "https://raw.githubusercontent.com/sprinteins/oscd-plugins/refs/heads/gh-pages/network-explorer/0.0.12/index.js"
 
-  - name: "type-switcher"
-    displayName: "Type Switcher"
-    type: 'editor'
-    version: "x.x.x"
-    url: "https://sprinteins.github.io/oscd-plugins/type-switcher/index.js"
+  # TODO verify this plugin as its not in the CoMPAS main version
+  #- name: "documentation"
+  #  displayName: "Documentation"
+  #  kind: "editor"
+  #  requiredDoc: true
+  #  version: "1.0.5"
+  #  sha256: "e32faafba2bef47c684e15044a11fb49e29044495833bf0b7fc7a52307401b8f"
+  #  url: "https://raw.githubusercontent.com/sprinteins/oscd-plugins/refs/heads/gh-pages/documentation/1.0.5/index.js"
 
-  - name: "launcher"
-    displayName: "OSCD Launcher"
-    type: 'editor'
-    version: "x.x.x"
-    url: "https://sprinteins.github.io/oscd-launcher/index.js"
+  # TODO verify this plugin as its not in the CoMPAS main version
+  #- name: "type-designer"
+  #  displayName: "Type Designer"
+  #  kind: "editor"
+  #  version: "x.x.x"
+  #  url: "https://sprinteins.github.io/oscd-plugins/type-designer/index.js"
 
-  - name: "ied"
-    displayName: "IED"
-    type: 'editor'
-    version: "x.x.x"
-    url: "https://philippilievskibearingpointcom.github.io/oscd-official-plugins/plugins/editors/ied.js"
+  # TODO verify this plugin as its not in the CoMPAS main version
+  #- name: "auto-doc"
+  #  displayName: "Auto Doc"
+  #  kind: "editor"
+  #  version: "x.x.x"
+  #  url: "https://sprinteins.github.io/oscd-plugins/auto-doc/index.js"
 
-  - name: "Substation"
-    displayName: "Substation"
-    type: 'editor'
-    version: "x.x.x"
-    url: "https://philippilievskibearingpointcom.github.io/oscd-official-plugins/plugins/editors/substation.js"
+  # TODO verify this plugin as its not in the CoMPAS main version
+  #- name: "io-center"
+  #  displayName: "IO Center"
+  #  kind: "editor"
+  #  version: "x.x.x"
+  #  url: "https://sprinteins.github.io/oscd-plugins/io-center/index.js"
 
-  - name: "Substation"
-    displayName: "Substation"
-    type: 'editor'
+  # TODO verify this plugin as its not in the CoMPAS main version
+  #- name: "type-switcher"
+  #  displayName: "Type Switcher"
+  #  kind: "editor"
+  #  version: "x.x.x"
+  #  url: "https://sprinteins.github.io/oscd-plugins/type-switcher/index.js"
+
+  # TODO verify this plugin as its not in the CoMPAS main version
+  #- name: "launcher"
+  #  displayName: "OSCD Launcher"
+  #  kind: "editor"
+  #  version: "x.x.x"
+  #  url: "https://sprinteins.github.io/oscd-launcher/index.js"
+
+  # ----- Omicron-Plugins -----
+
+  - name: "oscd-template-generator"
+    displayName: "OSCD Template Generator"
     version: "x.x.x"
-    url: "https://philippilievskibearingpointcom.github.io/oscd-official-plugins/plugins/editors/substation.js"
+    icon: 'copy_all'
+    activeByDefault: true
+    kind: 'editor'
+    requireDoc: true
+    url: "https://ca-d.github.io/oscd-template-generator/oscd-template-generator.js"
+    sha256: "826a14c6dd5ec4bf72a5429cf1538381f9cfe727ba7e26d083d390f2a4d5f20d"
+
+  # ----- Other-Plugins -----
+
+  # TODO verify this plugin as its not in the CoMPAS main version
+  #- name: "oscd-supervision"
+  #  displayName: "OSCD Supervision"
+  #  kind: "editor"
+  #  requiredDoc: true
+  #  version: "x.x.x"
+  #  sha256: "de4c935b47569fb63362d283b28ce4591aecd8135ac5961cd890db8f5ff4889f"
+  #  url: "https://danyill.github.io/oscd-supervision/oscd-supervision.js"

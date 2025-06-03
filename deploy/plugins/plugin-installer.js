@@ -46,17 +46,33 @@ async function main() {
     process.exit(1);
   }
 
-  let newPluginsArray = '';
+  let pluginsJsContent;
+  try {
+    pluginsJsContent = fs.readFileSync(PLUGINS_JS_PATH, "utf8");
+  } catch (error) {
+    console.error("Error reading plugins.js:", error.message);
+    process.exit(1);
+  }
+
+  let arrayStartIndex = pluginsJsContent.indexOf("[");
+  let arrayEndIndex = pluginsJsContent.lastIndexOf("]");
+  if (arrayStartIndex === -1 || arrayEndIndex === -1) {
+    console.error("Cannot find the array `officialPlugins` in plugins.js.");
+    process.exit(1);
+  }
+
+  const arrayContent = pluginsJsContent.slice(arrayStartIndex, arrayEndIndex + 1);
+  let newPluginsArray = arrayContent.trim().slice(1, -1).trim();
 
   for (const plugin of plugins) {
-    const {name, displayName, type, requiredDoc, version, sha256, url, additionalResources, activeByDefault} = plugin;
+    const {name, displayName, kind, icon, requiredDoc, version, sha256, url, additionalResources, activeByDefault, position} = plugin;
 
-    if (!name || !type || !version || !url || !displayName) {
+    if (!name || !kind || !version || !url || !displayName) {
       console.error("Invalid plugin configuration:", plugin);
       continue;
     }
 
-    const pluralType = toPlural(type);
+    const pluralType = toPlural(kind);
     const pluginDir = path.join(PLUGINS_DIST_PATH, pluralType, name, version);
     const pluginPath = path.join(pluginDir, `index.js`);
 
@@ -114,24 +130,28 @@ async function main() {
       {
         name: '${displayName}',
         src: '/${PLUGINS_ROOT}/${pluralType}/${name}/${version}/index.js',
-        icon: 'plugin',
+        icon: '${icon}',
         activeByDefault: ${activeByDefault || false},
-        requiredDoc: '${requiredDoc}',
-        kind: '${type}'
+        requiredDoc: ${requiredDoc},
+        kind: '${kind}',
+        ${position ? `position: '${position}'` : ''}
       }`;
 
     if (!newPluginsArray.includes(`name: '${name}'`)) {
-      newPluginsArray += `${newPlugin},`;
+      newPluginsArray += `,${newPlugin}`;
     }
   }
 
-  const updatedPluginsJsContent =
-`export const officialPlugins = [
-  ${newPluginsArray}
-];`;
+  newPluginsArray = newPluginsArray.replace(/,,/g, ",");
+
+  const updatedPluginsJsContent = `
+    export const officialPlugins = [
+    ${newPluginsArray}
+    ];
+  `;
 
   fs.writeFileSync(PLUGINS_JS_PATH, updatedPluginsJsContent, "utf8");
-  console.log("Plugins successfully written to plugins.js.");
+  console.log("Plugins successfully updated in plugins.js.");
 }
 
 main().catch((error) => {
