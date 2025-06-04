@@ -49,10 +49,28 @@ import {
   WizardMenuActor,
 } from './foundation.js';
 
+function isTemplateResultLike(obj: any): obj is { strings: TemplateStringsArray; values: unknown[] } {
+  return (
+    obj != null &&
+    typeof obj === 'object' &&
+    obj.strings !== undefined &&
+    Array.isArray(obj.strings) &&
+    'raw' in obj.strings &&
+    Array.isArray(obj.strings.raw) &&
+    Array.isArray(obj.values)
+  );
+}
+
 function renderWizardInput(
   input: TemplateResult | WizardInput
 ): TemplateResult {
-  if (input instanceof TemplateResult) return input;
+  if (input instanceof TemplateResult) {
+    return input;
+  }
+
+  if (isTemplateResultLike(input)) {
+    return html.apply(null, [input.strings, ...input.values]);
+  }
 
   if (input.kind === 'Checkbox')
     return html`<wizard-checkbox

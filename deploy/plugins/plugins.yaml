@@ -252,7 +252,7 @@ plugins:
     displayName: "Supistation"
     kind: "editor"
     version: "x.x.x"
-    url: "https://philippilievskibearingpointcom.github.io/oscd-official-plugins/plugins/editors/substation.js"
+    url: "https://philippilievskibearingpointcom.github.io/oscd-official-plugins-test/plugins/editors/substation.js"
 
 #  - name: "templates"
 #    displayName: "Templates"
