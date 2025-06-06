@@ -65,7 +65,7 @@ async function main() {
   let newPluginsArray = arrayContent.trim().slice(1, -1).trim();
 
   for (const plugin of plugins) {
-    const {name, displayName, kind, icon, requiredDoc, version, sha256, url, additionalResources, activeByDefault, position} = plugin;
+    const {name, displayName, kind, icon, requiredDoc: requireDoc, version, sha256, url, additionalResources, activeByDefault, position} = plugin;
 
     if (!name || !kind || !version || !url || !displayName) {
       console.error("Invalid plugin configuration:", plugin);
@@ -132,7 +132,7 @@ async function main() {
         src: '/${PLUGINS_ROOT}/${pluralType}/${name}/${version}/index.js',
         icon: '${icon}',
         activeByDefault: ${activeByDefault || false},
-        requiredDoc: ${requiredDoc},
+        requireDoc: ${requireDoc},
         kind: '${kind}',
         ${position ? `position: '${position}'` : ''}
       }`;

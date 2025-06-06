@@ -96,9 +96,9 @@ export function mergeSubstation(
             diff.theirs instanceof Element
               ? diff.theirs.tagName === 'LNode'
                 ? find(currentDoc, 'LNode', identity(diff.theirs)) === null &&
-                  isValidReference(docWithSubstation, identity(diff.theirs))
+                isValidReference(docWithSubstation, identity(diff.theirs))
                 : diff.theirs.tagName === 'Substation' ||
-                  !tags['SCL'].children.includes(<SCLTag>diff.theirs.tagName)
+                !tags['SCL'].children.includes(<SCLTag>diff.theirs.tagName)
               : diff.theirs !== null,
           disabled: (diff: Diff<Element | string>): boolean =>
             diff.theirs instanceof Element &&

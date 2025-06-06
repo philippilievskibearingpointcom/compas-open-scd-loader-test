@@ -1,252 +1,252 @@
 plugins:
-#
-#  # ----- OSCD-Official-Plugins -----
-#
-#  - name: "104"
-#    displayName: "104"
-#    url: "https://philippilievskibearingpointcom.github.io/oscd-official-plugins/plugins/editors/protocol104.js"
-#    icon: "settings_ethernet"
-#    version: "x.x.x"
-#    activeByDefault: false
-#    kind: "editor"
-#    requireDoc: true
-#
-#  - name: "cleanup"
-#    displayName: "Cleanup"
-#    url: "https://philippilievskibearingpointcom.github.io/oscd-official-plugins/plugins/editors/cleanup.js"
-#    version: "x.x.x"
-#    icon: "cleaning_services"
-#    activeByDefault: false
-#    kind: "editor"
-#    requireDoc: true
-#
-#  - name: "communication"
-#    displayName: "Communication"
-#    url: "https://philippilievskibearingpointcom.github.io/oscd-official-plugins/plugins/editors/communication.js"
-#    version: "x.x.x"
-#    icon: "settings_ethernet"
-#    activeByDefault: true
-#    kind: "editor"
-#    requireDoc: true
-#
-#  # This OSCD-Official-Plugin is overwritten by Sprint-Eins-Plugins
-#  #- name: "communication-explorer"
-#  #  displayName: "Communication Explorer"
-#  #  url: "https://philippilievskibearingpointcom.github.io/oscd-official-plugins/plugins/editors/communication-explorer.js"
-#  #  version: "x.x.x"
-#  #  icon: "lan"
-#  #  activeByDefault: true
-#  #  kind: "editor"
-#  #  requireDoc: true
-#
-#  # This OSCD-Official-Plugin is overwritten by CoMPAS-Plugins
-#  #- name: "compare-ied"
-#  #  displayName: "Compare IED"
-#  #  url: "https://philippilievskibearingpointcom.github.io/oscd-official-plugins/plugins/menu/compareied.js"
-#  #  version: "x.x.x"
-#  #  icon: "compare_arrows"
-#  #  activeByDefault: true
-#  #  kind: "menu"
-#  #  requireDoc: true
-#  #  position: "middle"
-#
-#  - name: "create-virtual-ied"
-#    displayName: "Create Virtual IED"
-#    url: "https://philippilievskibearingpointcom.github.io/oscd-official-plugins/plugins/menu/virtualtemplateied.js"
-#    version: "x.x.x"
-#    icon: "developer_board"
-#    activeByDefault: false
-#    kind: "menu"
-#    requireDoc: true
-#    position: "middle"
-#
-#  - name: "export-communication-section"
-#    displayName: "Export Communication Section"
-#    url: "https://philippilievskibearingpointcom.github.io/oscd-official-plugins/plugins/menu/exportcommunication.js"
-#    version: "x.x.x"
-#    icon: "sim_card_download"
-#    activeByDefault: false
-#    kind: "menu"
-#    requireDoc: true
-#    position: "middle"
-#
-#  - name: "help"
-#    displayName: "Help"
-#    url: "https://philippilievskibearingpointcom.github.io/oscd-official-plugins/plugins/menu/help.js"
-#    version: "x.x.x"
-#    icon: "help"
-#    activeByDefault: true
-#    kind: "menu"
-#    requireDoc: false
-#    position: "bottom"
-#
-#  - name: "ied"
-#    displayName: "IED"
-#    kind: "editor"
-#    version: "x.x.x"
-#    icon: "developer_board"
-#    requireDoc: true
-#    activeByDefault: true
-#    url: "https://philippilievskibearingpointcom.github.io/oscd-official-plugins/plugins/editors/ied.js"
-#
-#  # This OSCD_Official-Plugin is overwritten by CoMPAS-Plugins
-#  #- name: "import-ieds"
-#  #  displayName: "Import IEDs"
-#  #  url: "https://philippilievskibearingpointcom.github.io/oscd-official-plugins/plugins/menu/importieds.js"
-#  #  version: "x.x.x"
-#  #  icon: "snippet_folder"
-#  #  activeByDefault: true
-#  #  kind: "menu"
-#  #  requireDoc: true
-#  #  position: "middle"
-#
-#  # This OSCD_Official-Plugin is overwritten by CoMPAS-Plugins
-#  #- name: "merge-project"
-#  #  displayName: "Merge Project"
-#  #  url: "https://philippilievskibearingpointcom.github.io/oscd-official-plugins/plugins/menu/merge.js"
-#  #  version: "x.x.x"
-#  #  icon: "merge_type"
-#  #  activeByDefault: true
-#  #  kind: "menu"
-#  #  requireDoc: true
-#  #  position: "middle"
-#
-#  - name: "new-project"
-#    displayName: "New project"
-#    url: "https://philippilievskibearingpointcom.github.io/oscd-official-plugins/plugins/menu/newproject.js"
-#    version: "x.x.x"
-#    icon: "create_new_folder"
-#    activeByDefault: true
-#    kind: "menu"
-#    requireDoc: false
-#    position: "top"
-#
-#  # This OSCD_Official-Plugin is overwritten by CoMPAS-Plugins
-#  #- name: "open-project"
-#  #  displayName: "Open project"
-#  #  url: "https://philippilievskibearingpointcom.github.io/oscd-official-plugins/plugins/menu/openproject.js"
-#  #  version: "x.x.x"
-#  #  icon: "folder_open"
-#  #  activeByDefault: true
-#  #  kind: "menu"
-#  #  requireDoc: false
-#  #  position: "top"
-#
-#  # TODO
-#  - name: "plugin-store-beta"
-#    displayName: "Plugin Store (Beta)"
-#    url: "https://sprinteins.github.io/oscd-plugin-store/index.js"
-#    version: "x.x.x"
-#    icon: "shopping_bag"
-#    activeByDefault: false
-#    kind: "menu"
-#    requireDoc: false
-#    position: "bottom"
-#
-#  # TODO verify source
-#  - name: "publisher"
-#    displayName: "Publisher"
-#    url: "https://philippilievskibearingpointcom.github.io/oscd-official-plugins/plugins/editors/oscd-publisher.js"
-#    #url: ""/external-plugins/oscd-publisher/oscd-publisher.js""
-#    version: "x.x.x"
-#    icon: "publish"
-#    activeByDefault: true
-#    kind: "editor"
-#    requireDoc: true
-#
-#  # This OSCD_Official-Plugin is overwritten by CoMPAS-Plugins
-#  #- name: "save-project"
-#  #  displayName: "Save project"
-#  #  url: "https://philippilievskibearingpointcom.github.io/oscd-official-plugins/plugins/menu/saveproject.js"
-#  #  version: "x.x.x"
-#  #  icon: "save"
-#  #  activeByDefault: true
-#  #  kind: "menu"
-#  #  requireDoc: true
-#  #  position: "top"
-#
-#  - name: "show-scl-history"
-#    displayName: "Show SCL History"
-#    url: "ttps://philippilievskibearingpointcom.github.io/oscd-official-plugins/plugins/menu/sclhistory.js"
-#    version: "x.x.x"
-#    icon: "history_toggle_off"
-#    activeByDefault: true
-#    kind: "menu"
-#    requireDoc: true
-#    position: "bottom"
-#
-#  - name: "single-line-diagram"
-#    displayName: "Single Line Diagram"
-#    url: "https://philippilievskibearingpointcom.github.io/oscd-official-plugins/plugins/editors/singlelinediagram.js"
-#    version: "x.x.x"
-#    icon: "edit"
-#    activeByDefault: false
-#    kind: "editor"
-#    requireDoc: true
-#
-#  - name: "subscriber-data-binding-goose"
-#    displayName: "Subscriber Data Binding (GOOSE)"
-#    url: "https://philippilievskibearingpointcom.github.io/oscd-official-plugins/plugins/editors/goosesubscriberdatabinding.js"
-#    version: "x.x.x"
-#    icon: "link"
-#    activeByDefault: false
-#    kind: "editor"
-#    requireDoc: true
-#
-#  - name: "subscriber-data-binding-smv"
-#    displayName: "Subscriber Data Binding (SMV)"
-#    url: "https://philippilievskibearingpointcom.github.io/oscd-official-plugins/plugins/editors/smvsubscriberdatabinding.js"
-#    version: "x.x.x"
-#    icon: "link"
-#    activeByDefault: false
-#    kind: "editor"
-#    requireDoc: true
-#
-#  - name: "subscriber-later-binding-goose"
-#    displayName: "Subscriber Later Binding (GOOSE)"
-#    url: "https://philippilievskibearingpointcom.github.io/oscd-official-plugins/plugins/editors/goosesubscriberlaterbinding.js"
-#    version: "x.x.x"
-#    icon: "link"
-#    activeByDefault: true
-#    kind: "editor"
-#    requireDoc: true
-#
-#  - name: "subscriber-later-binding-smv"
-#    displayName: "Subscriber Later Binding (SMV)"
-#    url: "https://philippilievskibearingpointcom.github.io/oscd-official-plugins/plugins/editors/smvsubscriberlaterbinding.js"
-#    version: "x.x.x"
-#    icon: "link"
-#    activeByDefault: true
-#    kind: "editor"
-#    requireDoc: true
-#
-#  - name: "subscriber-message-binding-goose"
-#    displayName: "Subscriber Message Binding (GOOSE)"
-#    url: "https://philippilievskibearingpointcom.github.io/oscd-official-plugins/plugins/editors/goosesubscribermessagebinding.js"
-#    version: "x.x.x"
-#    icon: "link"
-#    activeByDefault: false
-#    kind: "editor"
-#    requireDoc: true
-#
-#  - name: "subscriber-message-binding-smv"
-#    displayName: "Subscriber Message Binding (SMV)"
-#    url: "https://philippilievskibearingpointcom.github.io/oscd-official-plugins/plugins/editors/smvsubscribermessagebinding.js"
-#    version: "x.x.x"
-#    icon: "link"
-#    activeByDefault: false
-#    kind: "editor"
-#    requireDoc: true
-#
-#  - name: "subscriber-update"
-#    displayName: "Subscriber Update"
-#    url: "https://philippilievskibearingpointcom.github.io/oscd-official-plugins/plugins/menu/subscriberinfo.js"
-#    version: "x.x.x"
-#    activeByDefault: true
-#    kind: "menu"
-#    requireDoc: true
-#    position: "middle"
-#
+
+  # ----- OSCD-Official-Plugins -----
+
+  - name: "104"
+    displayName: "104"
+    url: "https://philippilievskibearingpointcom.github.io/oscd-official-plugins-test/plugins/editors/protocol104.js"
+    icon: "settings_ethernet"
+    version: "x.x.x"
+    activeByDefault: false
+    kind: "editor"
+    requireDoc: true
+
+  - name: "cleanup"
+    displayName: "Cleanup"
+    url: "https://philippilievskibearingpointcom.github.io/oscd-official-plugins-test/plugins/editors/cleanup.js"
+    version: "x.x.x"
+    icon: "cleaning_services"
+    activeByDefault: false
+    kind: "editor"
+    requireDoc: true
+
+  - name: "communication"
+    displayName: "Communication"
+    url: "https://philippilievskibearingpointcom.github.io/oscd-official-plugins-test/plugins/editors/communication.js"
+    version: "x.x.x"
+    icon: "settings_ethernet"
+    activeByDefault: true
+    kind: "editor"
+    requireDoc: true
+
+  # This OSCD-Official-Plugin is overwritten by Sprint-Eins-Plugins
+  #- name: "communication-explorer"
+  #  displayName: "Communication Explorer"
+  #  url: "https://philippilievskibearingpointcom.github.io/oscd-official-plugins/plugins/editors/communication-explorer.js"
+  #  version: "x.x.x"
+  #  icon: "lan"
+  #  activeByDefault: true
+  #  kind: "editor"
+  #  requireDoc: true
+
+  # This OSCD-Official-Plugin is overwritten by CoMPAS-Plugins
+  #- name: "compare-ied"
+  #  displayName: "Compare IED"
+  #  url: "https://philippilievskibearingpointcom.github.io/oscd-official-plugins/plugins/menu/compareied.js"
+  #  version: "x.x.x"
+  #  icon: "compare_arrows"
+  #  activeByDefault: true
+  #  kind: "menu"
+  #  requireDoc: true
+  #  position: "middle"
+
+  - name: "create-virtual-ied"
+    displayName: "Create Virtual IED"
+    url: "https://philippilievskibearingpointcom.github.io/oscd-official-plugins-test/plugins/menu/virtualtemplateied.js"
+    version: "x.x.x"
+    icon: "developer_board"
+    activeByDefault: false
+    kind: "menu"
+    requireDoc: true
+    position: "middle"
+
+  - name: "export-communication-section"
+    displayName: "Export Communication Section"
+    url: "https://philippilievskibearingpointcom.github.io/oscd-official-plugins-test/plugins/menu/exportcommunication.js"
+    version: "x.x.x"
+    icon: "sim_card_download"
+    activeByDefault: false
+    kind: "menu"
+    requireDoc: true
+    position: "middle"
+
+  - name: "help"
+    displayName: "Help"
+    url: "https://philippilievskibearingpointcom.github.io/oscd-official-plugins-test/plugins/menu/help.js"
+    version: "x.x.x"
+    icon: "help"
+    activeByDefault: true
+    kind: "menu"
+    requireDoc: false
+    position: "bottom"
+
+  - name: "ied"
+    displayName: "IED"
+    kind: "editor"
+    version: "x.x.x"
+    icon: "developer_board"
+    requireDoc: true
+    activeByDefault: true
+    url: "https://philippilievskibearingpointcom.github.io/oscd-official-plugins-test/plugins/editors/ied.js"
+
+  # This OSCD_Official-Plugin is overwritten by CoMPAS-Plugins
+  #- name: "import-ieds"
+  #  displayName: "Import IEDs"
+  #  url: "https://philippilievskibearingpointcom.github.io/oscd-official-plugins/plugins/menu/importieds.js"
+  #  version: "x.x.x"
+  #  icon: "snippet_folder"
+  #  activeByDefault: true
+  #  kind: "menu"
+  #  requireDoc: true
+  #  position: "middle"
+
+  # This OSCD_Official-Plugin is overwritten by CoMPAS-Plugins
+  #- name: "merge-project"
+  #  displayName: "Merge Project"
+  #  url: "https://philippilievskibearingpointcom.github.io/oscd-official-plugins/plugins/menu/merge.js"
+  #  version: "x.x.x"
+  #  icon: "merge_type"
+  #  activeByDefault: true
+  #  kind: "menu"
+  #  requireDoc: true
+  #  position: "middle"
+
+  - name: "new-project"
+    displayName: "New project"
+    url: "https://philippilievskibearingpointcom.github.io/oscd-official-plugins-test/plugins/menu/newproject.js"
+    version: "x.x.x"
+    icon: "create_new_folder"
+    activeByDefault: true
+    kind: "menu"
+    requireDoc: false
+    position: "top"
+
+  # This OSCD_Official-Plugin is overwritten by CoMPAS-Plugins
+  #- name: "open-project"
+  #  displayName: "Open project"
+  #  url: "https://philippilievskibearingpointcom.github.io/oscd-official-plugins/plugins/menu/openproject.js"
+  #  version: "x.x.x"
+  #  icon: "folder_open"
+  #  activeByDefault: true
+  #  kind: "menu"
+  #  requireDoc: false
+  #  position: "top"
+
+  # TODO
+  - name: "plugin-store-beta"
+    displayName: "Plugin Store (Beta)"
+    url: "https://sprinteins.github.io/oscd-plugin-store/index.js"
+    version: "x.x.x"
+    icon: "shopping_bag"
+    activeByDefault: false
+    kind: "menu"
+    requireDoc: false
+    position: "bottom"
+
+  # TODO verify source
+  - name: "publisher"
+    displayName: "Publisher"
+    url: "https://philippilievskibearingpointcom.github.io/oscd-official-plugins/plugins/editors/oscd-publisher.js"
+    #url: ""/external-plugins/oscd-publisher/oscd-publisher.js""
+    version: "x.x.x"
+    icon: "publish"
+    activeByDefault: true
+    kind: "editor"
+    requireDoc: true
+
+  # This OSCD_Official-Plugin is overwritten by CoMPAS-Plugins
+  #- name: "save-project"
+  #  displayName: "Save project"
+  #  url: "https://philippilievskibearingpointcom.github.io/oscd-official-plugins/plugins/menu/saveproject.js"
+  #  version: "x.x.x"
+  #  icon: "save"
+  #  activeByDefault: true
+  #  kind: "menu"
+  #  requireDoc: true
+  #  position: "top"
+
+  - name: "show-scl-history"
+    displayName: "Show SCL History"
+    url: "https://philippilievskibearingpointcom.github.io/oscd-official-plugins-test/plugins/menu/sclhistory.js"
+    version: "x.x.x"
+    icon: "history_toggle_off"
+    activeByDefault: true
+    kind: "menu"
+    requireDoc: true
+    position: "bottom"
+
+  - name: "single-line-diagram"
+    displayName: "Single Line Diagram"
+    url: "https://philippilievskibearingpointcom.github.io/oscd-official-plugins-test/plugins/editors/singlelinediagram.js"
+    version: "x.x.x"
+    icon: "edit"
+    activeByDefault: false
+    kind: "editor"
+    requireDoc: true
+
+  - name: "subscriber-data-binding-goose"
+    displayName: "Subscriber Data Binding (GOOSE)"
+    url: "https://philippilievskibearingpointcom.github.io/oscd-official-plugins-test/plugins/editors/goosesubscriberdatabinding.js"
+    version: "x.x.x"
+    icon: "link"
+    activeByDefault: false
+    kind: "editor"
+    requireDoc: true
+
+  - name: "subscriber-data-binding-smv"
+    displayName: "Subscriber Data Binding (SMV)"
+    url: "https://philippilievskibearingpointcom.github.io/oscd-official-plugins-test/plugins/editors/smvsubscriberdatabinding.js"
+    version: "x.x.x"
+    icon: "link"
+    activeByDefault: false
+    kind: "editor"
+    requireDoc: true
+
+  - name: "subscriber-later-binding-goose"
+    displayName: "Subscriber Later Binding (GOOSE)"
+    url: "https://philippilievskibearingpointcom.github.io/oscd-official-plugins-test/plugins/editors/goosesubscriberlaterbinding.js"
+    version: "x.x.x"
+    icon: "link"
+    activeByDefault: true
+    kind: "editor"
+    requireDoc: true
+
+  - name: "subscriber-later-binding-smv"
+    displayName: "Subscriber Later Binding (SMV)"
+    url: "https://philippilievskibearingpointcom.github.io/oscd-official-plugins-test/plugins/editors/smvsubscriberlaterbinding.js"
+    version: "x.x.x"
+    icon: "link"
+    activeByDefault: true
+    kind: "editor"
+    requireDoc: true
+
+  - name: "subscriber-message-binding-goose"
+    displayName: "Subscriber Message Binding (GOOSE)"
+    url: "https://philippilievskibearingpointcom.github.io/oscd-official-plugins-test/plugins/editors/goosesubscribermessagebinding.js"
+    version: "x.x.x"
+    icon: "link"
+    activeByDefault: false
+    kind: "editor"
+    requireDoc: true
+
+  - name: "subscriber-message-binding-smv"
+    displayName: "Subscriber Message Binding (SMV)"
+    url: "https://philippilievskibearingpointcom.github.io/oscd-official-plugins-test/plugins/editors/smvsubscribermessagebinding.js"
+    version: "x.x.x"
+    icon: "link"
+    activeByDefault: false
+    kind: "editor"
+    requireDoc: true
+
+  - name: "subscriber-update"
+    displayName: "Subscriber Update"
+    url: "https://philippilievskibearingpointcom.github.io/oscd-official-plugins-test/plugins/menu/subscriberinfo.js"
+    version: "x.x.x"
+    activeByDefault: true
+    kind: "menu"
+    requireDoc: true
+    position: "middle"
+
 
   - name: "subbbstation"
     displayName: "Supistation"
@@ -254,60 +254,60 @@ plugins:
     version: "x.x.x"
     url: "https://philippilievskibearingpointcom.github.io/oscd-official-plugins-test/plugins/editors/substation.js"
 
-#  - name: "templates"
-#    displayName: "Templates"
-#    url: "https://philippilievskibearingpointcom.github.io/oscd-official-plugins/plugins/editors/templates.js"
-#    version: "x.x.x"
-#    icon: "copy_all"
-#    activeByDefault: true
-#    kind: "editor"
-#    requireDoc: true
-#
-#  - name: "update-desc-abb"
-#    displayName: "Update desc (ABB)"
-#    url: "https://philippilievskibearingpointcom.github.io/oscd-official-plugins/plugins/menu/updatedescriptionabb.js"
-#    version: "x.x.x"
-#    activeByDefault: false
-#    kind: "menu"
-#    requireDoc: true
-#    position: "middle"
-#
-#  - name: "update-desc-sel"
-#    displayName: "Update desc (SEL)"
-#    url: "https://philippilievskibearingpointcom.github.io/oscd-official-plugins/plugins/menu/updatedescriptionsel.js"
-#    version: "x.x.x"
-#    activeByDefault: false
-#    kind: "menu"
-#    requireDoc: true
-#    position: "middle"
-#
-#  # This OSCD_Official-Plugin is overwritten by CoMPAS-Plugins
-#  #- name: "update-substation"
-#  #  displayName: "Update Substation"
-#  #  url: "https://philippilievskibearingpointcom.github.io/oscd-official-plugins/plugins/menu/updatesubstation.js"
-#  #  version: "x.x.x"
-#  #  icon: "merge_type"
-#  #  activeByDefault: true
-#  #  kind: "menu"
-#  #  requireDoc: true
-#  #  position: "middle"
-#
-#  - name: "validate-schema"
-#    displayName: "Validate Schema"
-#    url: "https://philippilievskibearingpointcom.github.io/oscd-official-plugins/plugins/validators/validateschema.js"
-#    version: "x.x.x"
-#    icon: "rule_folder"
-#    activeByDefault: true
-#    kind: "validator"
-#
-#  - name: "validate-templates"
-#    displayName: "Validate Templates"
-#    url: "https://philippilievskibearingpointcom.github.io/oscd-official-plugins/plugins/validators/validatetemplates.js"
-#    version: "x.x.x"
-#    icon: "rule_folder"
-#    activeByDefault: true
-#    kind: "validator"
-#
+  - name: "templates"
+    displayName: "Templates"
+    url: "https://philippilievskibearingpointcom.github.io/oscd-official-plugins-test/plugins/editors/templates.js"
+    version: "x.x.x"
+    icon: "copy_all"
+    activeByDefault: true
+    kind: "editor"
+    requireDoc: true
+
+  - name: "update-desc-abb"
+    displayName: "Update desc (ABB)"
+    url: "https://philippilievskibearingpointcom.github.io/oscd-official-plugins-test/plugins/menu/updatedescriptionabb.js"
+    version: "x.x.x"
+    activeByDefault: false
+    kind: "menu"
+    requireDoc: true
+    position: "middle"
+
+  - name: "update-desc-sel"
+    displayName: "Update desc (SEL)"
+    url: "https://philippilievskibearingpointcom.github.io/oscd-official-plugins-test/plugins/menu/updatedescriptionsel.js"
+    version: "x.x.x"
+    activeByDefault: false
+    kind: "menu"
+    requireDoc: true
+    position: "middle"
+
+  # This OSCD_Official-Plugin is overwritten by CoMPAS-Plugins
+  #- name: "update-substation"
+  #  displayName: "Update Substation"
+  #  url: "https://philippilievskibearingpointcom.github.io/oscd-official-plugins/plugins/menu/updatesubstation.js"
+  #  version: "x.x.x"
+  #  icon: "merge_type"
+  #  activeByDefault: true
+  #  kind: "menu"
+  #  requireDoc: true
+  #  position: "middle"
+
+  - name: "validate-schema"
+    displayName: "Validate Schema"
+    url: "https://philippilievskibearingpointcom.github.io/oscd-official-plugins-test/plugins/validators/validateschema.js"
+    version: "x.x.x"
+    icon: "rule_folder"
+    activeByDefault: true
+    kind: "validator"
+
+  - name: "validate-templates"
+    displayName: "Validate Templates"
+    url: "https://philippilievskibearingpointcom.github.io/oscd-official-plugins-test/plugins/validators/validatetemplates.js"
+    version: "x.x.x"
+    icon: "rule_folder"
+    activeByDefault: true
+    kind: "validator"
+
 #  # ----- CoMPAS-Plugins -----
 #
 #  - name: "auto-align-sld"

@@ -553,11 +553,11 @@ export default class ImportingIedPlugin extends LitElement {
     this.iedSelection.push(html`<mwc-dialog data-file="${fileName}">
       <filtered-list hasSlot multi>
         ${Array.from(importDoc?.querySelectorAll(':root > IED') ?? []).map(
-          ied =>
-            html`<mwc-check-list-item value="${identity(ied)}"
+      ied =>
+        html`<mwc-check-list-item value="${identity(ied)}"
               >${ied.getAttribute('name')}</mwc-check-list-item
             >`
-        )}
+    )}
         <mwc-icon-button slot="meta" icon="edit"></mwc-icon-button>
       </filtered-list>
       <mwc-button
