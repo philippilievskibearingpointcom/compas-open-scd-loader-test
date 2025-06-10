@@ -163,9 +163,9 @@ export default class CompareIEDPlugin extends LitElement {
       trailingIcon
       label="${get('compare-ied.selectIedButton')}"
       @click=${() => {
-      this.selectedProjectIed = undefined;
-      this.selectedTemplateIed = undefined;
-    }}
+        this.selectedProjectIed = undefined;
+        this.selectedTemplateIed = undefined;
+      }}
     ></mwc-button>`;
   }
 
@@ -176,15 +176,15 @@ export default class CompareIEDPlugin extends LitElement {
       trailingIcon
       label="${get('compare.compareButton')}"
       @click=${() => {
-      this.selectedProjectIed = this.getSelectedListItem(
-        this.doc,
-        'currentDocument'
-      );
-      this.selectedTemplateIed = this.getSelectedListItem(
-        this.templateDoc!,
-        'currentTemplate'
-      );
-    }}
+        this.selectedProjectIed = this.getSelectedListItem(
+          this.doc,
+          'currentDocument'
+        );
+        this.selectedTemplateIed = this.getSelectedListItem(
+          this.templateDoc!,
+          'currentTemplate'
+        );
+      }}
     ></mwc-button>`;
   }
 
@@ -206,8 +206,8 @@ export default class CompareIEDPlugin extends LitElement {
         .rightHandObject=${this.selectedTemplateIed!}
         .leftHandTitle=${typeof leftHandTitle === 'number' ? '' : leftHandTitle}
         .rightHandTitle=${typeof rightHandTitle === 'number'
-      ? ''
-      : rightHandTitle}
+          ? ''
+          : rightHandTitle}
         .leftHandSubtitle=${this.docName}
         .rightHandSubtitle=${this.templateDocName}
         .filterToIgnore=${filterToIgnore}
@@ -218,11 +218,11 @@ export default class CompareIEDPlugin extends LitElement {
   private renderIEDList(ieds: Element[], id: string): TemplateResult {
     return html`<mwc-list id="${id}" activatable>
       ${ieds.map(ied => {
-      const name = getNameAttribute(ied);
-      return html`<mwc-list-item value="${identity(ied)}" left>
+        const name = getNameAttribute(ied);
+        return html`<mwc-list-item value="${identity(ied)}" left>
           <span>${name}</span>
         </mwc-list-item>`;
-    })}
+      })}
     </mwc-list>`;
   }
 
@@ -253,17 +253,17 @@ export default class CompareIEDPlugin extends LitElement {
           hidden
           required
           @change=${(evt: Event) =>
-      this.dispatchEvent(newPendingStateEvent(this.getTemplateFile(evt)))}
+            this.dispatchEvent(newPendingStateEvent(this.getTemplateFile(evt)))}
         />
 
         <mwc-button
           label="${get('compare-ied.selectTemplateButton')}"
           @click=${() => {
-      const input = <HTMLInputElement | null>(
-        this.shadowRoot!.querySelector('#template-file')
-      );
-      input?.click();
-    }}
+            const input = <HTMLInputElement | null>(
+              this.shadowRoot!.querySelector('#template-file')
+            );
+            input?.click();
+          }}
         ></mwc-button>
       </div>
       ${this.renderCloseButton()}`;

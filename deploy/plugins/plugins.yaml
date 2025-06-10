@@ -308,193 +308,193 @@ plugins:
     activeByDefault: true
     kind: "validator"
 
-#  # ----- CoMPAS-Plugins -----
-#
-#  - name: "auto-align-sld"
-#    displayName: "Auto Align SLD"
-#    url: "https://ase-compas.github.io/compas-open-scd-plugins/plugins/menu/compasautoalignment.js"
-#    version: "x.x.x"
-#    icon: "dashboard"
-#    activeByDefault: true
-#    kind: "menu"
-#    requireDoc: true
-#    position: "middle"
-#
-#  - name: "autogen-substation"
-#    displayName: "Autogen Substation"
-#    url: "https://ase-compas.github.io/compas-open-scd-plugins/plugins/editors/autogen-substation.js"
-#    version: "x.x.x"
-#    icon: "playlist_add_circle"
-#    activeByDefault: true
-#    kind: "menu"
-#    requireDoc: true
-#    position: "middle"
-#
-#  - name: "compare-ied"
-#    displayName: "Compare IED"
-#    url: "https://ase-compas.github.io/compas-open-scd-plugins/plugins/menu/compascompareied.js"
-#    version: "x.x.x"
-#    icon: "compare_arrows"
-#    activeByDefault: true
-#    kind: "menu"
-#    requireDoc: true
-#    position: "middle"
-#
-#  - name: "compas-settings"
-#    displayName: "CoMPAS Settings"
-#    url: "https://ase-compas.github.io/compas-open-scd-plugins/plugins/menu/compassettings.js"
-#    version: "x.x.x"
-#    icon: "settings"
-#    activeByDefault: true
-#    kind: "menu"
-#    requireDoc: false
-#    position: "bottom"
-#
-#  - name: "compas-versions"
-#    displayName: "CoMPAS Versions"
-#    url: "https://ase-compas.github.io/compas-open-scd-plugins/plugins/editors/compasversions.js"
-#    version: "x.x.x"
-#    icon: "copy_all"
-#    activeByDefault: true
-#    kind: "editor"
-#    requireDoc: true
-#
-#  - name: "export-iec-104-csv"
-#    displayName: "Export IEC 104 CSV"
-#    url: "https://ase-compas.github.io/compas-open-scd-plugins/plugins/menu/export104.js"
-#    version: "x.x.x"
-#    icon: "sim_card_download"
-#    activeByDefault: false
-#    kind: "menu"
-#    requireDoc: true
-#    position: "middle"
-#
-#  - name: "export-ied-params"
-#    displayName: "Export IED Params"
-#    url: "https://ase-compas.github.io/compas-open-scd-plugins/plugins/menu/exportiedparams.js"
-#    version: "x.x.x"
-#    icon: "download"
-#    activeByDefault: false
-#    kind: "menu"
-#    requireDoc: true
-#    position: "middle"
-#
-#  - name: "import-from-api"
-#    displayName: "Import from API"
-#    url: "https://ase-compas.github.io/compas-open-scd-plugins/plugins/menu/compasimportfromapi.js"
-#    version: "x.x.x"
-#    icon: "cloud_download"
-#    activeByDefault: false
-#    kind: "menu"
-#    requireDoc: false
-#    position: "top"
-#
-#  - name: "import-ieds"
-#    displayName: "Import IEDs"
-#    url: "https://ase-compas.github.io/compas-open-scd-plugins/plugins/menu/compasimportieds.js"
-#    version: "x.x.x"
-#    icon: "snippet_folder"
-#    activeByDefault: true
-#    kind: "menu"
-#    requireDoc: true
-#    position: "middle"
-#
-#  - name: "locamation-vmu"
-#    displayName: "Locamation VMU"
-#    url: "https://ase-compas.github.io/compas-open-scd-plugins/plugins/menu/locamationvmu.js"
-#    version: "x.x.x"
-#    icon: "edit_note"
-#    activeByDefault: false
-#    kind: "menu"
-#    requireDoc: true
-#    position: "middle"
-#
-#  - name: "merge-project"
-#    displayName: "Merge Project"
-#    url: "https://ase-compas.github.io/compas-open-scd-plugins/plugins/menu/compasmerge.js"
-#    version: "x.x.x"
-#    icon: "merge_type"
-#    activeByDefault: true
-#    kind: "menu"
-#    requireDoc: true
-#    position: "middle"
-#
-#  - name: "open-project"
-#    displayName: "Open Project"
-#    url: "https://ase-compas.github.io/compas-open-scd-plugins/plugins/menu/compasopen.js"
-#    version: "x.x.x"
-#    icon: "folder_open"
-#    activeByDefault: true
-#    kind: "menu"
-#    requireDoc: false
-#    position: "top"
-#
-#  - name: "project-from-cim"
-#    displayName: "Project from CIM"
-#    url: "https://ase-compas.github.io/compas-open-scd-plugins/plugins/menu/compascimmapping.js"
-#    version: "x.x.x"
-#    icon: "input"
-#    activeByDefault: true
-#    kind: "menu"
-#    requireDoc: false
-#    position: "top"
-#
-#  - name: "save-as-version"
-#    displayName: "Save as Version"
-#    url: "https://ase-compas.github.io/compas-open-scd-plugins/plugins/menu/compassaveasversion.js"
-#    version: "x.x.x"
-#    icon: "save"
-#    activeByDefault: true
-#    kind: "menu"
-#    requireDoc: true
-#    position: "top"
-#
-#  - name: "save-project"
-#    displayName: "Save Project"
-#    url: "https://ase-compas.github.io/compas-open-scd-plugins/plugins/menu/compassave.js"
-#    version: "x.x.x"
-#    icon: "save"
-#    activeByDefault: true
-#    kind: "menu"
-#    requireDoc: true
-#    position: "top"
-#
-#  - name: "save-project-as"
-#    displayName: "Save Project as"
-#    url: "https://ase-compas.github.io/compas-open-scd-plugins/plugins/menu/compassaveas.js"
-#    version: "x.x.x"
-#    icon: "save"
-#    activeByDefault: true
-#    kind: "menu"
-#    requireDoc: true
-#    position: "top"
-#
-#  - name: "sitipe"
-#    displayName: "Sitipe"
-#    url: "https://ase-compas.github.io/compas-open-scd-plugins/plugins/editors/sitipe.js"
-#    version: "x.x.x"
-#    icon: "precision_manufacturing"
-#    activeByDefault: true
-#    kind: "editor"
-#    requireDoc: true
-#
-#  - name: "update-substation"
-#    displayName: "Update Substation"
-#    url: "https://ase-compas.github.io/compas-open-scd-plugins/plugins/menu/compasupdatesubstation.js"
-#    version: "x.x.x"
-#    icon: "merge_type"
-#    activeByDefault: true
-#    kind: "menu"
-#    requireDoc: true
-#    position: "middle"
-#
-#  - name: "validate-using-ocl"
-#    displayName: "[WIP] Validate using OCL"
-#    url: "https://ase-compas.github.io/compas-open-scd-plugins/plugins/validators/compasvalidateschema.js"
-#    version: "x.x.x"
-#    icon: "rule_folder"
-#    activeByDefault: false
-#    kind: "validator"
+  # ----- CoMPAS-Plugins -----
+
+  - name: "auto-align-sld"
+    displayName: "Auto Align SLD"
+    url: "https://philippilievskibearingpointcom.github.io/compas-open-scd-plugins-test/plugins/menu/compasautoalignment.js"
+    version: "x.x.x"
+    icon: "dashboard"
+    activeByDefault: true
+    kind: "menu"
+    requireDoc: true
+    position: "middle"
+
+  - name: "autogen-substation"
+    displayName: "Autogen Substation"
+    url: "https://philippilievskibearingpointcom.github.io/compas-open-scd-plugins-test/plugins/editors/autogen-substation.js"
+    version: "x.x.x"
+    icon: "playlist_add_circle"
+    activeByDefault: true
+    kind: "menu"
+    requireDoc: true
+    position: "middle"
+
+  - name: "compare-ied"
+    displayName: "Compare IED"
+    url: "https://philippilievskibearingpointcom.github.io/compas-open-scd-plugins-test/plugins/menu/compascompareied.js"
+    version: "x.x.x"
+    icon: "compare_arrows"
+    activeByDefault: true
+    kind: "menu"
+    requireDoc: true
+    position: "middle"
+
+  - name: "compas-settings"
+    displayName: "CoMPAS Settings"
+    url: "https://philippilievskibearingpointcom.github.io/compas-open-scd-plugins-test/plugins/menu/compassettings.js"
+    version: "x.x.x"
+    icon: "settings"
+    activeByDefault: true
+    kind: "menu"
+    requireDoc: false
+    position: "bottom"
+
+  - name: "compas-versions"
+    displayName: "CoMPAS Versions"
+    url: "https://philippilievskibearingpointcom.github.io/compas-open-scd-plugins-test/plugins/editors/compasversions.js"
+    version: "x.x.x"
+    icon: "copy_all"
+    activeByDefault: true
+    kind: "editor"
+    requireDoc: true
+
+  - name: "export-iec-104-csv"
+    displayName: "Export IEC 104 CSV"
+    url: "https://philippilievskibearingpointcom.github.io/compas-open-scd-plugins-test/plugins/menu/export104.js"
+    version: "x.x.x"
+    icon: "sim_card_download"
+    activeByDefault: false
+    kind: "menu"
+    requireDoc: true
+    position: "middle"
+
+  - name: "export-ied-params"
+    displayName: "Export IED Params"
+    url: "https://philippilievskibearingpointcom.github.io/compas-open-scd-plugins-test/plugins/menu/exportiedparams.js"
+    version: "x.x.x"
+    icon: "download"
+    activeByDefault: false
+    kind: "menu"
+    requireDoc: true
+    position: "middle"
+
+  - name: "import-from-api"
+    displayName: "Import from API"
+    url: "https://philippilievskibearingpointcom.github.io/compas-open-scd-plugins-test/plugins/menu/compasimportfromapi.js"
+    version: "x.x.x"
+    icon: "cloud_download"
+    activeByDefault: false
+    kind: "menu"
+    requireDoc: false
+    position: "top"
+
+  - name: "import-ieds"
+    displayName: "Import IEDs"
+    url: "https://philippilievskibearingpointcom.github.io/compas-open-scd-plugins-test/plugins/menu/compasimportieds.js"
+    version: "x.x.x"
+    icon: "snippet_folder"
+    activeByDefault: true
+    kind: "menu"
+    requireDoc: true
+    position: "middle"
+
+  - name: "locamation-vmu"
+    displayName: "Locamation VMU"
+    url: "https://philippilievskibearingpointcom.github.io/compas-open-scd-plugins-test/plugins/menu/locamationvmu.js"
+    version: "x.x.x"
+    icon: "edit_note"
+    activeByDefault: false
+    kind: "menu"
+    requireDoc: true
+    position: "middle"
+
+  - name: "merge-project"
+    displayName: "Merge Project"
+    url: "https://philippilievskibearingpointcom.github.io/compas-open-scd-plugins-test/plugins/menu/compasmerge.js"
+    version: "x.x.x"
+    icon: "merge_type"
+    activeByDefault: true
+    kind: "menu"
+    requireDoc: true
+    position: "middle"
+
+  - name: "open-project"
+    displayName: "Open Project"
+    url: "https://philippilievskibearingpointcom.github.io/compas-open-scd-plugins-test/plugins/menu/compasopen.js"
+    version: "x.x.x"
+    icon: "folder_open"
+    activeByDefault: true
+    kind: "menu"
+    requireDoc: false
+    position: "top"
+
+  - name: "project-from-cim"
+    displayName: "Project from CIM"
+    url: "https://philippilievskibearingpointcom.github.io/compas-open-scd-plugins-test/plugins/menu/compascimmapping.js"
+    version: "x.x.x"
+    icon: "input"
+    activeByDefault: true
+    kind: "menu"
+    requireDoc: false
+    position: "top"
+
+  - name: "save-as-version"
+    displayName: "Save as Version"
+    url: "https://philippilievskibearingpointcom.github.io/compas-open-scd-plugins-test/plugins/menu/compassaveasversion.js"
+    version: "x.x.x"
+    icon: "save"
+    activeByDefault: true
+    kind: "menu"
+    requireDoc: true
+    position: "top"
+
+  - name: "save-project"
+    displayName: "Save Project"
+    url: "https://philippilievskibearingpointcom.github.io/compas-open-scd-plugins-test/plugins/menu/compassave.js"
+    version: "x.x.x"
+    icon: "save"
+    activeByDefault: true
+    kind: "menu"
+    requireDoc: true
+    position: "top"
+
+  - name: "save-project-as"
+    displayName: "Save Project as"
+    url: "https://philippilievskibearingpointcom.github.io/compas-open-scd-plugins-test/plugins/menu/compassaveas.js"
+    version: "x.x.x"
+    icon: "save"
+    activeByDefault: true
+    kind: "menu"
+    requireDoc: true
+    position: "top"
+
+  - name: "sitipe"
+    displayName: "Sitipe"
+    url: "https://philippilievskibearingpointcom.github.io/compas-open-scd-plugins-test/plugins/editors/sitipe.js"
+    version: "x.x.x"
+    icon: "precision_manufacturing"
+    activeByDefault: true
+    kind: "editor"
+    requireDoc: true
+
+  - name: "update-substation"
+    displayName: "Update Substation"
+    url: "https://philippilievskibearingpointcom.github.io/compas-open-scd-plugins-test/plugins/menu/compasupdatesubstation.js"
+    version: "x.x.x"
+    icon: "merge_type"
+    activeByDefault: true
+    kind: "menu"
+    requireDoc: true
+    position: "middle"
+
+  - name: "validate-using-ocl"
+    displayName: "[WIP] Validate using OCL"
+    url: "https://philippilievskibearingpointcom.github.io/compas-open-scd-plugins-test/plugins/validators/compasvalidateschema.js"
+    version: "x.x.x"
+    icon: "rule_folder"
+    activeByDefault: false
+    kind: "validator"
 
   # ----- TransnetBW-Plugins -----
 
