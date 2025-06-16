@@ -3,7 +3,7 @@ plugins:
   # ----- OSCD-Official-Plugins -----
 
   - name: "104"
-    displayName: "104"
+    folderName: "104"
     url: "https://philippilievskibearingpointcom.github.io/oscd-official-plugins-test/plugins/editors/protocol104.js"
     icon: "settings_ethernet"
     version: "x.x.x"
@@ -11,8 +11,8 @@ plugins:
     kind: "editor"
     requireDoc: true
 
-  - name: "cleanup"
-    displayName: "Cleanup"
+  - name: "Cleanup"
+    folderName: "cleanup"
     url: "https://philippilievskibearingpointcom.github.io/oscd-official-plugins-test/plugins/editors/cleanup.js"
     version: "x.x.x"
     icon: "cleaning_services"
@@ -20,8 +20,8 @@ plugins:
     kind: "editor"
     requireDoc: true
 
-  - name: "communication"
-    displayName: "Communication"
+  - name: "Communication"
+    folderName: "communication"
     url: "https://philippilievskibearingpointcom.github.io/oscd-official-plugins-test/plugins/editors/communication.js"
     version: "x.x.x"
     icon: "settings_ethernet"
@@ -30,8 +30,8 @@ plugins:
     requireDoc: true
 
   # This OSCD-Official-Plugin is overwritten by Sprint-Eins-Plugins
-  #- name: "communication-explorer"
-  #  displayName: "Communication Explorer"
+  #- name: "Communication Explorer"
+  #  folderName: "communication-explorer"
   #  url: "https://philippilievskibearingpointcom.github.io/oscd-official-plugins/plugins/editors/communication-explorer.js"
   #  version: "x.x.x"
   #  icon: "lan"
@@ -40,8 +40,8 @@ plugins:
   #  requireDoc: true
 
   # This OSCD-Official-Plugin is overwritten by CoMPAS-Plugins
-  #- name: "compare-ied"
-  #  displayName: "Compare IED"
+  #- name: "Compare IED"
+  #  folderName: "compare-ied"
   #  url: "https://philippilievskibearingpointcom.github.io/oscd-official-plugins/plugins/menu/compareied.js"
   #  version: "x.x.x"
   #  icon: "compare_arrows"
@@ -50,8 +50,8 @@ plugins:
   #  requireDoc: true
   #  position: "middle"
 
-  - name: "create-virtual-ied"
-    displayName: "Create Virtual IED"
+  - name: "Create Virtual IED"
+    folderName: "create-virtual-ied"
     url: "https://philippilievskibearingpointcom.github.io/oscd-official-plugins-test/plugins/menu/virtualtemplateied.js"
     version: "x.x.x"
     icon: "developer_board"
@@ -60,8 +60,8 @@ plugins:
     requireDoc: true
     position: "middle"
 
-  - name: "export-communication-section"
-    displayName: "Export Communication Section"
+  - name: "Export Communication Section"
+    folderName: "export-communication-section"
     url: "https://philippilievskibearingpointcom.github.io/oscd-official-plugins-test/plugins/menu/exportcommunication.js"
     version: "x.x.x"
     icon: "sim_card_download"
@@ -70,8 +70,8 @@ plugins:
     requireDoc: true
     position: "middle"
 
-  - name: "help"
-    displayName: "Help"
+  - name: "Help"
+    folderName: "help"
     url: "https://philippilievskibearingpointcom.github.io/oscd-official-plugins-test/plugins/menu/help.js"
     version: "x.x.x"
     icon: "help"
@@ -80,8 +80,8 @@ plugins:
     requireDoc: false
     position: "bottom"
 
-  - name: "ied"
-    displayName: "IED"
+  - name: "IED"
+    folderName: "ied"
     kind: "editor"
     version: "x.x.x"
     icon: "developer_board"
@@ -90,8 +90,8 @@ plugins:
     url: "https://philippilievskibearingpointcom.github.io/oscd-official-plugins-test/plugins/editors/ied.js"
 
   # This OSCD_Official-Plugin is overwritten by CoMPAS-Plugins
-  #- name: "import-ieds"
-  #  displayName: "Import IEDs"
+  #- name: "Import IEDs"
+  #  folderName: "import-ieds"
   #  url: "https://philippilievskibearingpointcom.github.io/oscd-official-plugins/plugins/menu/importieds.js"
   #  version: "x.x.x"
   #  icon: "snippet_folder"
@@ -101,8 +101,8 @@ plugins:
   #  position: "middle"
 
   # This OSCD_Official-Plugin is overwritten by CoMPAS-Plugins
-  #- name: "merge-project"
-  #  displayName: "Merge Project"
+  #- name: "Merge Project"
+  #  folderName: "merge-project"
   #  url: "https://philippilievskibearingpointcom.github.io/oscd-official-plugins/plugins/menu/merge.js"
   #  version: "x.x.x"
   #  icon: "merge_type"
@@ -111,8 +111,8 @@ plugins:
   #  requireDoc: true
   #  position: "middle"
 
-  - name: "new-project"
-    displayName: "New project"
+  - name: "New project"
+    folderName: "new-project"
     url: "https://philippilievskibearingpointcom.github.io/oscd-official-plugins-test/plugins/menu/newproject.js"
     version: "x.x.x"
     icon: "create_new_folder"
@@ -122,8 +122,8 @@ plugins:
     position: "top"
 
   # This OSCD_Official-Plugin is overwritten by CoMPAS-Plugins
-  #- name: "open-project"
-  #  displayName: "Open project"
+  #- name: "Open project"
+  #  folderName: "open-project"
   #  url: "https://philippilievskibearingpointcom.github.io/oscd-official-plugins/plugins/menu/openproject.js"
   #  version: "x.x.x"
   #  icon: "folder_open"
@@ -133,8 +133,8 @@ plugins:
   #  position: "top"
 
   # TODO
-  - name: "plugin-store-beta"
-    displayName: "Plugin Store (Beta)"
+  - name: "Plugin Store (Beta)"
+    folderName: "plugin-store-beta"
     url: "https://sprinteins.github.io/oscd-plugin-store/index.js"
     version: "x.x.x"
     icon: "shopping_bag"
@@ -144,8 +144,8 @@ plugins:
     position: "bottom"
 
   # TODO verify source
-  - name: "publisher"
-    displayName: "Publisher"
+  - name: "Publisher"
+    folderName: "publisher"
     url: "https://philippilievskibearingpointcom.github.io/oscd-official-plugins/plugins/editors/oscd-publisher.js"
     #url: ""/external-plugins/oscd-publisher/oscd-publisher.js""
     version: "x.x.x"
@@ -155,8 +155,8 @@ plugins:
     requireDoc: true
 
   # This OSCD_Official-Plugin is overwritten by CoMPAS-Plugins
-  #- name: "save-project"
-  #  displayName: "Save project"
+  #- name: "Save project"
+  #  folderName: "save-project"
   #  url: "https://philippilievskibearingpointcom.github.io/oscd-official-plugins/plugins/menu/saveproject.js"
   #  version: "x.x.x"
   #  icon: "save"
@@ -165,8 +165,8 @@ plugins:
   #  requireDoc: true
   #  position: "top"
 
-  - name: "show-scl-history"
-    displayName: "Show SCL History"
+  - name: "Show SCL History"
+    folderName: "show-scl-history"
     url: "https://philippilievskibearingpointcom.github.io/oscd-official-plugins-test/plugins/menu/sclhistory.js"
     version: "x.x.x"
     icon: "history_toggle_off"
@@ -175,8 +175,8 @@ plugins:
     requireDoc: true
     position: "bottom"
 
-  - name: "single-line-diagram"
-    displayName: "Single Line Diagram"
+  - name: "Single Line Diagram"
+    folderName: "single-line-diagram"
     url: "https://philippilievskibearingpointcom.github.io/oscd-official-plugins-test/plugins/editors/singlelinediagram.js"
     version: "x.x.x"
     icon: "edit"
@@ -184,8 +184,8 @@ plugins:
     kind: "editor"
     requireDoc: true
 
-  - name: "subscriber-data-binding-goose"
-    displayName: "Subscriber Data Binding (GOOSE)"
+  - name: "Subscriber Data Binding (GOOSE)"
+    folderName: "subscriber-data-binding-goose"
     url: "https://philippilievskibearingpointcom.github.io/oscd-official-plugins-test/plugins/editors/goosesubscriberdatabinding.js"
     version: "x.x.x"
     icon: "link"
@@ -193,8 +193,8 @@ plugins:
     kind: "editor"
     requireDoc: true
 
-  - name: "subscriber-data-binding-smv"
-    displayName: "Subscriber Data Binding (SMV)"
+  - name: "Subscriber Data Binding (SMV)"
+    folderName: "subscriber-data-binding-smv"
     url: "https://philippilievskibearingpointcom.github.io/oscd-official-plugins-test/plugins/editors/smvsubscriberdatabinding.js"
     version: "x.x.x"
     icon: "link"
@@ -202,8 +202,8 @@ plugins:
     kind: "editor"
     requireDoc: true
 
-  - name: "subscriber-later-binding-goose"
-    displayName: "Subscriber Later Binding (GOOSE)"
+  - name: "Subscriber Later Binding (GOOSE)"
+    folderName: "subscriber-later-binding-goose"
     url: "https://philippilievskibearingpointcom.github.io/oscd-official-plugins-test/plugins/editors/goosesubscriberlaterbinding.js"
     version: "x.x.x"
     icon: "link"
@@ -211,8 +211,8 @@ plugins:
     kind: "editor"
     requireDoc: true
 
-  - name: "subscriber-later-binding-smv"
-    displayName: "Subscriber Later Binding (SMV)"
+  - name: "Subscriber Later Binding (SMV)"
+    folderName: "subscriber-later-binding-smv"
     url: "https://philippilievskibearingpointcom.github.io/oscd-official-plugins-test/plugins/editors/smvsubscriberlaterbinding.js"
     version: "x.x.x"
     icon: "link"
@@ -220,8 +220,8 @@ plugins:
     kind: "editor"
     requireDoc: true
 
-  - name: "subscriber-message-binding-goose"
-    displayName: "Subscriber Message Binding (GOOSE)"
+  - name: "Subscriber Message Binding (GOOSE)"
+    folderName: "subscriber-message-binding-goose"
     url: "https://philippilievskibearingpointcom.github.io/oscd-official-plugins-test/plugins/editors/goosesubscribermessagebinding.js"
     version: "x.x.x"
     icon: "link"
@@ -229,8 +229,8 @@ plugins:
     kind: "editor"
     requireDoc: true
 
-  - name: "subscriber-message-binding-smv"
-    displayName: "Subscriber Message Binding (SMV)"
+  - name: "Subscriber Message Binding (SMV)"
+    folderName: "subscriber-message-binding-smv"
     url: "https://philippilievskibearingpointcom.github.io/oscd-official-plugins-test/plugins/editors/smvsubscribermessagebinding.js"
     version: "x.x.x"
     icon: "link"
@@ -238,8 +238,8 @@ plugins:
     kind: "editor"
     requireDoc: true
 
-  - name: "subscriber-update"
-    displayName: "Subscriber Update"
+  - name: "Subscriber Update"
+    folderName: "subscriber-update"
     url: "https://philippilievskibearingpointcom.github.io/oscd-official-plugins-test/plugins/menu/subscriberinfo.js"
     version: "x.x.x"
     activeByDefault: true
@@ -248,14 +248,14 @@ plugins:
     position: "middle"
 
 
-  - name: "subbbstation"
-    displayName: "Supistation"
+  - name: "Supistation"
+    folderName: "subbbstation"
     kind: "editor"
     version: "x.x.x"
     url: "https://philippilievskibearingpointcom.github.io/oscd-official-plugins-test/plugins/editors/substation.js"
 
-  - name: "templates"
-    displayName: "Templates"
+  - name: "Templates"
+    folderName: "templates"
     url: "https://philippilievskibearingpointcom.github.io/oscd-official-plugins-test/plugins/editors/templates.js"
     version: "x.x.x"
     icon: "copy_all"
@@ -263,8 +263,8 @@ plugins:
     kind: "editor"
     requireDoc: true
 
-  - name: "update-desc-abb"
-    displayName: "Update desc (ABB)"
+  - name: "Update desc (ABB)"
+    folderName: "update-desc-abb"
     url: "https://philippilievskibearingpointcom.github.io/oscd-official-plugins-test/plugins/menu/updatedescriptionabb.js"
     version: "x.x.x"
     activeByDefault: false
@@ -272,8 +272,8 @@ plugins:
     requireDoc: true
     position: "middle"
 
-  - name: "update-desc-sel"
-    displayName: "Update desc (SEL)"
+  - name: "Update desc (SEL)"
+    folderName: "update-desc-sel"
     url: "https://philippilievskibearingpointcom.github.io/oscd-official-plugins-test/plugins/menu/updatedescriptionsel.js"
     version: "x.x.x"
     activeByDefault: false
@@ -282,8 +282,8 @@ plugins:
     position: "middle"
 
   # This OSCD_Official-Plugin is overwritten by CoMPAS-Plugins
-  #- name: "update-substation"
-  #  displayName: "Update Substation"
+  #- name: "Update Substation"
+  #  folderName: "update-substation"
   #  url: "https://philippilievskibearingpointcom.github.io/oscd-official-plugins/plugins/menu/updatesubstation.js"
   #  version: "x.x.x"
   #  icon: "merge_type"
@@ -292,16 +292,16 @@ plugins:
   #  requireDoc: true
   #  position: "middle"
 
-  - name: "validate-schema"
-    displayName: "Validate Schema"
+  - name: "Validate Schema"
+    folderName: "validate-schema"
     url: "https://philippilievskibearingpointcom.github.io/oscd-official-plugins-test/plugins/validators/validateschema.js"
     version: "x.x.x"
     icon: "rule_folder"
     activeByDefault: true
     kind: "validator"
 
-  - name: "validate-templates"
-    displayName: "Validate Templates"
+  - name: "Validate Templates"
+    folderName: "validate-templates"
     url: "https://philippilievskibearingpointcom.github.io/oscd-official-plugins-test/plugins/validators/validatetemplates.js"
     version: "x.x.x"
     icon: "rule_folder"
@@ -310,8 +310,8 @@ plugins:
 
   # ----- CoMPAS-Plugins -----
 
-  - name: "auto-align-sld"
-    displayName: "Auto Align SLD"
+  - name: "Auto Align SLD"
+    folderName: "auto-align-sld"
     url: "https://philippilievskibearingpointcom.github.io/compas-open-scd-plugins-test/plugins/menu/compasautoalignment.js"
     version: "x.x.x"
     icon: "dashboard"
@@ -320,8 +320,8 @@ plugins:
     requireDoc: true
     position: "middle"
 
-  - name: "autogen-substation"
-    displayName: "Autogen Substation"
+  - name: "Autogen Substation"
+    folderName: "autogen-substation"
     url: "https://philippilievskibearingpointcom.github.io/compas-open-scd-plugins-test/plugins/editors/autogen-substation.js"
     version: "x.x.x"
     icon: "playlist_add_circle"
@@ -330,8 +330,8 @@ plugins:
     requireDoc: true
     position: "middle"
 
-  - name: "compare-ied"
-    displayName: "Compare IED"
+  - name: "Compare IED"
+    folderName: "compare-ied"
     url: "https://philippilievskibearingpointcom.github.io/compas-open-scd-plugins-test/plugins/menu/compascompareied.js"
     version: "x.x.x"
     icon: "compare_arrows"
@@ -340,8 +340,8 @@ plugins:
     requireDoc: true
     position: "middle"
 
-  - name: "compas-settings"
-    displayName: "CoMPAS Settings"
+  - name: "CoMPAS Settings"
+    folderName: "compas-settings"
     url: "https://philippilievskibearingpointcom.github.io/compas-open-scd-plugins-test/plugins/menu/compassettings.js"
     version: "x.x.x"
     icon: "settings"
@@ -350,8 +350,8 @@ plugins:
     requireDoc: false
     position: "bottom"
 
-  - name: "compas-versions"
-    displayName: "CoMPAS Versions"
+  - name: "CoMPAS Versions"
+    folderName: "compas-versions"
     url: "https://philippilievskibearingpointcom.github.io/compas-open-scd-plugins-test/plugins/editors/compasversions.js"
     version: "x.x.x"
     icon: "copy_all"
@@ -359,8 +359,8 @@ plugins:
     kind: "editor"
     requireDoc: true
 
-  - name: "export-iec-104-csv"
-    displayName: "Export IEC 104 CSV"
+  - name: "Export IEC 104 CSV"
+    folderName: "export-iec-104-csv"
     url: "https://philippilievskibearingpointcom.github.io/compas-open-scd-plugins-test/plugins/menu/export104.js"
     version: "x.x.x"
     icon: "sim_card_download"
@@ -369,8 +369,8 @@ plugins:
     requireDoc: true
     position: "middle"
 
-  - name: "export-ied-params"
-    displayName: "Export IED Params"
+  - name: "Export IED Params"
+    folderName: "export-ied-params"
     url: "https://philippilievskibearingpointcom.github.io/compas-open-scd-plugins-test/plugins/menu/exportiedparams.js"
     version: "x.x.x"
     icon: "download"
@@ -379,8 +379,8 @@ plugins:
     requireDoc: true
     position: "middle"
 
-  - name: "import-from-api"
-    displayName: "Import from API"
+  - name: "Import from API"
+    folderName: "import-from-api"
     url: "https://philippilievskibearingpointcom.github.io/compas-open-scd-plugins-test/plugins/menu/compasimportfromapi.js"
     version: "x.x.x"
     icon: "cloud_download"
@@ -389,8 +389,8 @@ plugins:
     requireDoc: false
     position: "top"
 
-  - name: "import-ieds"
-    displayName: "Import IEDs"
+  - name: "Import IEDs"
+    folderName: "import-ieds"
     url: "https://philippilievskibearingpointcom.github.io/compas-open-scd-plugins-test/plugins/menu/compasimportieds.js"
     version: "x.x.x"
     icon: "snippet_folder"
@@ -399,8 +399,8 @@ plugins:
     requireDoc: true
     position: "middle"
 
-  - name: "locamation-vmu"
-    displayName: "Locamation VMU"
+  - name: "Locamation VMU"
+    folderName: "locamation-vmu"
     url: "https://philippilievskibearingpointcom.github.io/compas-open-scd-plugins-test/plugins/menu/locamationvmu.js"
     version: "x.x.x"
     icon: "edit_note"
@@ -409,8 +409,8 @@ plugins:
     requireDoc: true
     position: "middle"
 
-  - name: "merge-project"
-    displayName: "Merge Project"
+  - name: "Merge Project"
+    folderName: "merge-project"
     url: "https://philippilievskibearingpointcom.github.io/compas-open-scd-plugins-test/plugins/menu/compasmerge.js"
     version: "x.x.x"
     icon: "merge_type"
@@ -419,8 +419,8 @@ plugins:
     requireDoc: true
     position: "middle"
 
-  - name: "open-project"
-    displayName: "Open Project"
+  - name: "Open Project"
+    folderName: "open-project"
     url: "https://philippilievskibearingpointcom.github.io/compas-open-scd-plugins-test/plugins/menu/compasopen.js"
     version: "x.x.x"
     icon: "folder_open"
@@ -429,8 +429,8 @@ plugins:
     requireDoc: false
     position: "top"
 
-  - name: "project-from-cim"
-    displayName: "Project from CIM"
+  - name: "Project from CIM"
+    folderName: "project-from-cim"
     url: "https://philippilievskibearingpointcom.github.io/compas-open-scd-plugins-test/plugins/menu/compascimmapping.js"
     version: "x.x.x"
     icon: "input"
@@ -439,8 +439,8 @@ plugins:
     requireDoc: false
     position: "top"
 
-  - name: "save-as-version"
-    displayName: "Save as Version"
+  - name: "Save as Version"
+    folderName: "save-as-version"
     url: "https://philippilievskibearingpointcom.github.io/compas-open-scd-plugins-test/plugins/menu/compassaveasversion.js"
     version: "x.x.x"
     icon: "save"
@@ -449,8 +449,8 @@ plugins:
     requireDoc: true
     position: "top"
 
-  - name: "save-project"
-    displayName: "Save Project"
+  - name: "Save Project"
+    folderName: "save-project"
     url: "https://philippilievskibearingpointcom.github.io/compas-open-scd-plugins-test/plugins/menu/compassave.js"
     version: "x.x.x"
     icon: "save"
@@ -459,8 +459,8 @@ plugins:
     requireDoc: true
     position: "top"
 
-  - name: "save-project-as"
-    displayName: "Save Project as"
+  - name: "Save Project as"
+    folderName: "save-project-as"
     url: "https://philippilievskibearingpointcom.github.io/compas-open-scd-plugins-test/plugins/menu/compassaveas.js"
     version: "x.x.x"
     icon: "save"
@@ -469,8 +469,8 @@ plugins:
     requireDoc: true
     position: "top"
 
-  - name: "sitipe"
-    displayName: "Sitipe"
+  - name: "Sitipe"
+    folderName: "sitipe"
     url: "https://philippilievskibearingpointcom.github.io/compas-open-scd-plugins-test/plugins/editors/sitipe.js"
     version: "x.x.x"
     icon: "precision_manufacturing"
@@ -478,8 +478,8 @@ plugins:
     kind: "editor"
     requireDoc: true
 
-  - name: "update-substation"
-    displayName: "Update Substation"
+  - name: "Update Substation"
+    folderName: "update-substation"
     url: "https://philippilievskibearingpointcom.github.io/compas-open-scd-plugins-test/plugins/menu/compasupdatesubstation.js"
     version: "x.x.x"
     icon: "merge_type"
@@ -488,8 +488,8 @@ plugins:
     requireDoc: true
     position: "middle"
 
-  - name: "validate-using-ocl"
-    displayName: "[WIP] Validate using OCL"
+  - name: "[WIP] Validate using OCL"
+    folderName: "validate-using-ocl"
     url: "https://philippilievskibearingpointcom.github.io/compas-open-scd-plugins-test/plugins/validators/compasvalidateschema.js"
     version: "x.x.x"
     icon: "rule_folder"
@@ -498,8 +498,8 @@ plugins:
 
   # ----- TransnetBW-Plugins -----
 
-  - name: "archive-explorer"
-    displayName: "Archive Explorer"
+  - name: "Archive Explorer"
+    folderName: "archive-explorer"
     kind: "editor"
     version: "x.x.x"
     url: "https://ase-compas.github.io/compas-transnetbw-plugins/bearingpoint/compas/plugins/archive-explorer/index.js"
@@ -507,8 +507,8 @@ plugins:
       - "https://ase-compas.github.io/compas-transnetbw-plugins/bearingpoint/compas/plugins/archive-explorer/style.css"
       - "https://ase-compas.github.io/compas-transnetbw-plugins/bearingpoint/compas/plugins/archive-explorer/global.css"
 
-  - name: "history-viewer"
-    displayName: "History Viewer"
+  - name: "History Viewer"
+    folderName: "history-viewer"
     kind: "editor"
     version: "x.x.x"
     url: "https://ase-compas.github.io/compas-transnetbw-plugins/bearingpoint/compas/plugins/history-viewer/index.js"
@@ -516,8 +516,8 @@ plugins:
       - "https://ase-compas.github.io/compas-transnetbw-plugins/bearingpoint/compas/plugins/history-viewer/style.css"
       - "https://ase-compas.github.io/compas-transnetbw-plugins/bearingpoint/compas/plugins/history-viewer/global.css"
 
-  - name: "location-manager"
-    displayName: "Location Manager"
+  - name: "Location Manager"
+    folderName: "location-manager"
     kind: "editor"
     version: "x.x.x"
     url: "https://ase-compas.github.io/compas-transnetbw-plugins/bearingpoint/compas/plugins/location-manager/index.js"
@@ -525,8 +525,8 @@ plugins:
       - "https://ase-compas.github.io/compas-transnetbw-plugins/bearingpoint/compas/plugins/location-manager/style.css"
       - "https://ase-compas.github.io/compas-transnetbw-plugins/bearingpoint/compas/plugins/location-manager/global.css"
 
-  - name: "location-viewer"
-    displayName: "Location Viewer"
+  - name: "Location Viewer"
+    folderName: "location-viewer"
     kind: "editor"
     version: "x.x.x"
     url: "https://ase-compas.github.io/compas-transnetbw-plugins/bearingpoint/compas/plugins/location-viewer/index.js"
@@ -534,16 +534,16 @@ plugins:
       - "https://ase-compas.github.io/compas-transnetbw-plugins/bearingpoint/compas/plugins/location-viewer/style.css"
       - "https://ase-compas.github.io/compas-transnetbw-plugins/bearingpoint/compas/plugins/location-viewer/global.css"
 
-  - name: "tsld"
-    displayName: "TSLD Editor"
+  - name: "TSLD Editor"
+    folderName: "tsld"
     kind: "editor"
     version: "x.x.x"
     url: "https://ase-compas.github.io/compas-transnetbw-plugins/bearingpoint/compas/plugins/tsld/index.js"
 
   # ---- Sprint-Eins-Plugins -----
 
-  - name: "communication-explorer"
-    displayName: "Communication Explorer"
+  - name: "Communication Explorer"
+    folderName: "communication-explorer"
     kind: "editor"
     requiredDoc: true
     version: "0.0.31"
@@ -551,8 +551,8 @@ plugins:
     sha256: "5e0c88e3b294dbdfe9c256b4186c993b08e05f90d475040d5b7cfe043101caff"
 
   # TODO verify this plugin as its not in the CoMPAS main version
-  #- name: "network-explorer"
-  #  displayName: "Network Explorer"
+  #- name: "Network Explorer"
+  #  folderName: "network-explorer"
   #  kind: "editor"
   #  requiredDoc: true
   #  version: "0.0.12"
@@ -560,8 +560,8 @@ plugins:
   #  url: "https://raw.githubusercontent.com/sprinteins/oscd-plugins/refs/heads/gh-pages/network-explorer/0.0.12/index.js"
 
   # TODO verify this plugin as its not in the CoMPAS main version
-  #- name: "documentation"
-  #  displayName: "Documentation"
+  #- name: "Documentation"
+  #  folderName: "documentation"
   #  kind: "editor"
   #  requiredDoc: true
   #  version: "1.0.5"
@@ -569,44 +569,44 @@ plugins:
   #  url: "https://raw.githubusercontent.com/sprinteins/oscd-plugins/refs/heads/gh-pages/documentation/1.0.5/index.js"
 
   # TODO verify this plugin as its not in the CoMPAS main version
-  #- name: "type-designer"
-  #  displayName: "Type Designer"
+  #- name: "Type Designer"
+  #  folderName: "type-designer"
   #  kind: "editor"
   #  version: "x.x.x"
   #  url: "https://sprinteins.github.io/oscd-plugins/type-designer/index.js"
 
   # TODO verify this plugin as its not in the CoMPAS main version
-  #- name: "auto-doc"
-  #  displayName: "Auto Doc"
+  #- name: "Auto Doc"
+  #  folderName: "auto-doc"
   #  kind: "editor"
   #  version: "x.x.x"
   #  url: "https://sprinteins.github.io/oscd-plugins/auto-doc/index.js"
 
   # TODO verify this plugin as its not in the CoMPAS main version
-  #- name: "io-center"
-  #  displayName: "IO Center"
+  #- name: "IO Center"
+  #  folderName: "io-center"
   #  kind: "editor"
   #  version: "x.x.x"
   #  url: "https://sprinteins.github.io/oscd-plugins/io-center/index.js"
 
   # TODO verify this plugin as its not in the CoMPAS main version
-  #- name: "type-switcher"
-  #  displayName: "Type Switcher"
+  #- name: "Type Switcher"
+  #  folderName: "type-switcher"
   #  kind: "editor"
   #  version: "x.x.x"
   #  url: "https://sprinteins.github.io/oscd-plugins/type-switcher/index.js"
 
   # TODO verify this plugin as its not in the CoMPAS main version
-  #- name: "launcher"
-  #  displayName: "OSCD Launcher"
+  #- name: "OSCD Launcher"
+  #  folderName: "launcher"
   #  kind: "editor"
   #  version: "x.x.x"
   #  url: "https://sprinteins.github.io/oscd-launcher/index.js"
 
   # ----- Omicron-Plugins -----
 
-  - name: "oscd-template-generator"
-    displayName: "OSCD Template Generator"
+  - name: "OSCD Template Generator"
+    folderName: "oscd-template-generator"
     version: "x.x.x"
     icon: 'copy_all'
     activeByDefault: true
@@ -618,8 +618,8 @@ plugins:
   # ----- Other-Plugins -----
 
   # TODO verify this plugin as its not in the CoMPAS main version
-  #- name: "oscd-supervision"
-  #  displayName: "OSCD Supervision"
+  #- name: "OSCD Supervision"
+  #  folderName: "oscd-supervision"
   #  kind: "editor"
   #  requiredDoc: true
   #  version: "x.x.x"
