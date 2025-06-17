@@ -26,13 +26,13 @@ WORKDIR /app
 COPY --from=builder /app/packages/compas-open-scd/build ./build/
 
 # Copy plugin installer script
-COPY deploy/plugins/ ./plugins/
+COPY deploy/plugins/ ./deploy/plugins/
 
 # Install packages
-RUN cd plugins && npm install
+RUN cd deploy/plugins && npm install
 
 # Run plugin installer script
-RUN node ./plugins/plugin-installer.js ./plugins/plugins.yaml ./build/
+RUN node ./deploy/plugins/plugin-installer.js ./deploy/plugins/plugins.yaml ./build/
 
 
 ### Stage 3

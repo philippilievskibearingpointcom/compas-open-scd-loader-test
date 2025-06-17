@@ -1,7 +1,123 @@
 import fetch from 'node-fetch';
-import fs from 'fs';
 import path from 'path';
 import yaml from 'js-yaml';
+import { createWriteStream, existsSync, mkdirSync, readFileSync, writeFileSync } from 'fs';
+
+const OVERWRITE_INTERNAL_PLUGINS = true;
+
+async function main() {
+  const [yamlPath, buildPath] = process.argv.slice(2);
+
+  if (!yamlPath || !buildPath) {
+    console.error("Usage: node script.js <path_to_plugins_yaml> <path_to_build_folder>");
+    process.exit(1);
+  }
+  const pluginJsPath = path.join(buildPath, "public/js/plugins.js");
+  const pluginsDistPath = path.join(buildPath, 'plugins/src');
+
+  try {
+    const internalPlugins = await parsePluginJs(pluginJsPath);
+    const externalPlugins = parsePluginYaml(yamlPath);
+    const installedPlugins = await installPlugins(internalPlugins, externalPlugins, pluginsDistPath);
+    updatePluginsJs(installedPlugins, pluginJsPath);
+  } catch (err) {
+    console.error("Error:", err.message);
+    process.exit(1);
+  }
+}
+
+async function parsePluginJs(pluginJsPath) {
+  if (!existsSync(pluginJsPath)) {
+    throw new Error(`plugins.js not found at ../../${pluginJsPath}`);
+  }
+  try {
+    const { officialPlugins } = await import(`../../${pluginJsPath}`);
+    console.log({officialPlugins});
+    if (!Array.isArray(officialPlugins)) {
+      throw new Error('Exported officialPlugins is not an array.');
+    }
+    return officialPlugins;
+  } catch (error) {
+    throw new Error(`Failed to import ${pluginJsPath}: ${error.message}`);
+  }
+}
+
+function parsePluginYaml(yamlPath) {
+  if (!existsSync(yamlPath)) {
+    throw new Error(`plugins.yaml not found at ${yamlPath}`);
+  }
+  const content = readFileSync(yamlPath, 'utf8');
+  const parsed = yaml.load(content);
+  const plugins = parsed?.plugins;
+  if (!Array.isArray(plugins) || plugins.length === 0) {
+    throw new Error("No plugins defined in plugins.yaml.");
+  }
+  return plugins;
+}
+
+async function installPlugins(internalPlugins, externalPlugins, pluginsDistPath) {
+  const resultMap = new Map();
+
+  for (const plugin of internalPlugins) {
+    console.log(`installing Plugin "${plugin.name}" from "${plugin.src}`);
+    resultMap.set(plugin.name, plugin);
+  }
+
+  const installPromises = externalPlugins.map(async (plugin) => {
+    if (OVERWRITE_INTERNAL_PLUGINS || !resultMap.has(plugin.name)) {
+      const logEntry = `${!resultMap.has(plugin.name) ? "installing" : "overwriting"} Plugin "${plugin.name}" from "${plugin.url}`;
+      try {
+        return await loadPluginSources(plugin, pluginsDistPath, logEntry)
+      } catch (error) {
+        console.warn(`✗ ${logEntry}:`, error);
+      }
+    }
+  });
+
+  const installedPlugins = await Promise.all(installPromises);
+  await installedPlugins
+    .filter(Boolean) // remove nulls
+    .forEach(plugin => resultMap.set(plugin.name, plugin));
+
+  return Array.from(resultMap.values());
+}
+
+async function loadPluginSources(plugin, pluginsDistPath, logEntry) {
+  const { name, folderName, kind, version, sha256, url, additionalResources } = plugin;
+
+  if (!name || !folderName || !kind || !version || !url) {
+    throw new Error(`missing fields: ${JSON.stringify(plugin, null, 2)}`);
+  }
+
+  const pluginDir = path.join(pluginsDistPath, toPlural(kind), folderName, version);
+  if (!existsSync(pluginDir)) {
+    mkdirSync(pluginDir, { recursive: true });
+  }
+
+  // Download additional resources
+  if (Array.isArray(additionalResources)) {
+    for (const resourceUrl of additionalResources) {
+      const fileName = path.basename(resourceUrl);
+      const resourcePath = path.join(pluginDir, fileName);
+      try {
+        await downloadFile(resourceUrl, resourcePath);
+      } catch (err) {
+        console.warn(`✗ ${logEntry}: Downloading resource ${fileName}`, err.message);
+      }
+    }
+  }
+
+  // Download main plugin
+  const pluginPath = path.join(pluginDir, "index.js");
+  try {
+    await downloadFile(url, pluginPath);
+    console.log(`✓ ${logEntry}`);
+  } catch (err) {
+    console.error(`✗ Failed to download plugin ${name}: ${err.message}`);
+  }
+
+  return mapExternalPlugin(plugin, `/plugins/src/${toPlural(kind)}/${folderName}/${version}/index.js`);
+}
 
 function toPlural(word) {
   if (word.endsWith('y')) {
@@ -13,148 +129,36 @@ function toPlural(word) {
   }
 }
 
-async function main() {
-  const args = process.argv.slice(2);
-  if (args.length < 2) {
-    console.error("Usage: node script.js <path_to_plugins_yaml> <path_to_build_folder>");
-    process.exit(1);
-  }
+async function downloadFile(url, destination) {
+  const response = await fetch(url);
+  if (!response.ok) throw new Error(`Failed to fetch ${url}: ${response.statusText}`);
 
-  const PLUGIN_YAML_PATH = args[0];
-  const BUILD_PATH = args[1];
-  const PLUGINS_ROOT = "plugins/src";
-  const PLUGINS_JS_PATH = path.join(BUILD_PATH, "public/js/plugins.js");
-  const PLUGINS_DIST_PATH = path.join(BUILD_PATH, PLUGINS_ROOT);
-
-  if (!fs.existsSync(PLUGIN_YAML_PATH)) {
-    console.error("plugins.yaml not found. Please create a plugins.yaml file with the plugins to install.");
-    process.exit(1);
-  }
-
-  let plugins;
-  try {
-    const yamlContent = fs.readFileSync(PLUGIN_YAML_PATH, "utf8");
-    const parsedYaml = yaml.load(yamlContent);
-    plugins = parsedYaml.plugins || [];
-  } catch (error) {
-    console.error("Error parsing plugins.yaml:", error.message);
-    process.exit(1);
-  }
-
-  if (!Array.isArray(plugins) || plugins.length === 0) {
-    console.error("No plugins found in plugins.yaml. Please add plugins to install.");
-    process.exit(1);
-  }
-
-  let pluginsJsContent;
-  try {
-    pluginsJsContent = fs.readFileSync(PLUGINS_JS_PATH, "utf8");
-  } catch (error) {
-    console.error("Error reading plugins.js:", error.message);
-    process.exit(1);
-  }
-
-  let arrayStartIndex = pluginsJsContent.indexOf("[");
-  let arrayEndIndex = pluginsJsContent.lastIndexOf("]");
-  if (arrayStartIndex === -1 || arrayEndIndex === -1) {
-    console.error("Cannot find the array `officialPlugins` in plugins.js.");
-    process.exit(1);
-  }
-
-  const arrayContent = pluginsJsContent.slice(arrayStartIndex, arrayEndIndex + 1);
-  let newPluginsArray = arrayContent.trim().slice(1, -1).trim();
-
-  for (const plugin of plugins) {
-    const {name, displayName, kind, icon, requiredDoc: requireDoc, version, sha256, url, additionalResources, activeByDefault, position} = plugin;
-
-    if (!name || !kind || !version || !url || !displayName) {
-      console.error("Invalid plugin configuration:", plugin);
-      continue;
-    }
-
-    const pluralType = toPlural(kind);
-    const pluginDir = path.join(PLUGINS_DIST_PATH, pluralType, name, version);
-    const pluginPath = path.join(pluginDir, `index.js`);
-
-    console.log(`Plugin path: ${pluginPath}`);
-
-    if (!fs.existsSync(pluginDir)) {
-      fs.mkdirSync(pluginDir, {recursive: true});
-    }
-
-    if(!additionalResources?.length) {
-      console.log('No additional resources found');
-    } else {
-      for (const resource of additionalResources) {
-        const resourceName = resource.substring(resource.lastIndexOf('/') + 1);
-        const resourcePath = path.join(pluginDir, resourceName)
-        try {
-          console.log("Downloading resource from", resource);
-
-          const response = await fetch(resource);
-          if (!response.ok) throw new Error(`Failed to download resource: ${resourceName}`);
-
-          const fileStream = fs.createWriteStream(resourcePath);
-          await new Promise((resolve, reject) => {
-            response.body.pipe(fileStream);
-            response.body.on("error", reject);
-            fileStream.on("finish", resolve);
-          });
-
-          console.log(`Successfully downloaded: ${resourceName}`);
-        } catch (error) {
-          console.error('Failed to download additional resources');
-        }
-      }
-    }
-
-    try {
-      console.log(`Downloading plugin ${name} version ${version}...`);
-      const response = await fetch(url);
-      if (!response.ok) throw new Error(`Failed to fetch plugin: ${response.statusText}`);
-
-      const fileStream = fs.createWriteStream(pluginPath);
-      await new Promise((resolve, reject) => {
-        response.body.pipe(fileStream);
-        response.body.on("error", reject);
-        fileStream.on("finish", resolve);
-      });
-
-      console.log(`Plugin ${name} version ${version} downloaded successfully and saved to ${pluginPath}.`);
-    } catch (error) {
-      console.error(`Failed to download plugin ${name}:`, error.message);
-      continue;
-    }
-
-    const newPlugin = `
-      {
-        name: '${displayName}',
-        src: '/${PLUGINS_ROOT}/${pluralType}/${name}/${version}/index.js',
-        icon: '${icon}',
-        activeByDefault: ${activeByDefault || false},
-        requireDoc: ${requireDoc},
-        kind: '${kind}',
-        ${position ? `position: '${position}'` : ''}
-      }`;
-
-    if (!newPluginsArray.includes(`name: '${name}'`)) {
-      newPluginsArray += `,${newPlugin}`;
-    }
-  }
-
-  newPluginsArray = newPluginsArray.replace(/,,/g, ",");
-
-  const updatedPluginsJsContent = `
-    export const officialPlugins = [
-    ${newPluginsArray}
-    ];
-  `;
-
-  fs.writeFileSync(PLUGINS_JS_PATH, updatedPluginsJsContent, "utf8");
-  console.log("Plugins successfully updated in plugins.js.");
+  return new Promise((resolve, reject) => {
+    const stream = createWriteStream(destination);
+    response.body.pipe(stream);
+    response.body.on('error', reject);
+    stream.on('finish', resolve);
+  });
 }
 
-main().catch((error) => {
-  console.error("An error occurred:", error.message);
-  process.exit(1);
-});
+function mapExternalPlugin(plugin, pluginPath) {
+  return {
+    name: plugin.name,
+    src: pluginPath,
+    icon: plugin.icon,
+    activeByDefault: plugin.activeByDefault || false,
+    requireDoc: plugin.requireDoc ?? false,
+    kind: plugin.kind,
+    ...(plugin.position ? { position: plugin.position } : {})
+  };
+}
+
+function updatePluginsJs(installedPlugins, pluginJsPath) {
+  try {
+    writeFileSync(pluginJsPath, `export const officialPlugins = \n${JSON.stringify(installedPlugins, null, 2)}\n;\n`, 'utf8');
+    console.log("✓ plugins.js updated.");
+  } catch (error) {
+    console.error("✗ failed to update plugins.js:", error);
+  }
+}
+main();
