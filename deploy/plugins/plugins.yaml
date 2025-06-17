@@ -111,6 +111,16 @@ plugins:
   #  requireDoc: true
   #  position: "middle"
 
+  - name: "Open project"
+    folderName: "open-project"
+    url: "https://philippilievskibearingpointcom.github.io/compas-open-scd-plugins-test/plugins/menu/compasopen.js"
+    version: "x.x.x"
+    icon: "folder_open"
+    activeByDefault: true
+    kind: "menu"
+    requireDoc: false
+    position: "top"
+
   - name: "New project"
     folderName: "new-project"
     url: "https://philippilievskibearingpointcom.github.io/oscd-official-plugins-test/plugins/menu/newproject.js"
@@ -419,16 +429,6 @@ plugins:
     requireDoc: true
     position: "middle"
 
-  - name: "Open Project"
-    folderName: "open-project"
-    url: "https://philippilievskibearingpointcom.github.io/compas-open-scd-plugins-test/plugins/menu/compasopen.js"
-    version: "x.x.x"
-    icon: "folder_open"
-    activeByDefault: true
-    kind: "menu"
-    requireDoc: false
-    position: "top"
-
   - name: "Project from CIM"
     folderName: "project-from-cim"
     url: "https://philippilievskibearingpointcom.github.io/compas-open-scd-plugins-test/plugins/menu/compascimmapping.js"
@@ -447,7 +447,7 @@ plugins:
     activeByDefault: true
     kind: "menu"
     requireDoc: true
-    position: "top"
+    position: "middle"
 
   - name: "Save Project"
     folderName: "save-project"
@@ -457,7 +457,7 @@ plugins:
     activeByDefault: true
     kind: "menu"
     requireDoc: true
-    position: "top"
+    position: "middle"
 
   - name: "Save Project as"
     folderName: "save-project-as"
@@ -467,7 +467,7 @@ plugins:
     activeByDefault: true
     kind: "menu"
     requireDoc: true
-    position: "top"
+    position: "middle"
 
   - name: "Sitipe"
     folderName: "sitipe"
