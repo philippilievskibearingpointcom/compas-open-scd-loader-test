@@ -7,7 +7,8 @@ export function getTheme(theme: Settings['theme']): TemplateResult {
     ${themes[theme]}
     <style>
       * {
-        --primary: var(--cyan);
+        --primary: var(--primary-base);
+        --on-primary: var(--white);
         --secondary: var(--violet);
         --mdc-theme-primary: var(--primary);
         --mdc-theme-secondary: var(--secondary);
@@ -81,6 +82,7 @@ const themes: Record<Settings['theme'], TemplateResult> = {
   light: html`
     <style>
       * {
+        --primary-base: #004552;
         --base03: #002b36;
         --base02: #073642;
         --base01: #586e75;
@@ -97,6 +99,7 @@ const themes: Record<Settings['theme'], TemplateResult> = {
         --blue: #268bd2;
         --cyan: #2aa198;
         --green: #859900;
+        --white: #FFFFFF;
       }
     </style>
   `,

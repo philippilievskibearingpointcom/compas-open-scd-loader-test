@@ -391,7 +391,13 @@ export class CompasLayout extends LitElement {
         slot="navigationIcon"
         @click=${() => (this.menuUI.open = true)}
       ></mwc-icon-button>
-      <div slot="title" id="title">${this.docName}</div>
+      <div slot="title" id="title" style="display: flex; flex-direction: row; align-items: center; width: 50vw;">
+        <img
+          src="../../public/tnbw.logo.svg"
+          alt="Transnet BW"
+        />
+        <p style="margin-left: auto;">${this.docName}</p>
+      </div>
       ${this.username != undefined
               ? html`<span
                   id="userField"
@@ -569,7 +575,21 @@ export class CompasLayout extends LitElement {
 
     mwc-tab {
       background-color: var(--primary);
+      color: var(--mdc-theme-on-primary);
       --mdc-theme-primary: var(--mdc-theme-on-primary);
+      --mdc-tab-indicator-color: var(--mdc-theme-on-primary);
+      --mdc-theme-text-primary-on-background:  white;
+      --mdc-theme-text-secondary-on-background: white;
+      --mdc-tab-text-label-color-default: white;
+      --mdc-tab-color-default:            white;
+    }
+
+    mwc-tab[active],
+    mwc-tab[selected],
+    mwc-tab[aria-selected="true"] {
+      --mdc-theme-primary:           #D9D800;
+      --mdc-tab-indicator-color:     #D9D800;
+      --mdc-tab-color-default:       #D9D800;
     }
 
     input[type='file'] {
